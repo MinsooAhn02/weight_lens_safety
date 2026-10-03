@@ -1,0 +1,549 @@
+{
+ "cohort": "_r11_same_ckpt_{256,512}",
+ "note": "R11 판정 — 같은 체크포인트에서 256 대 512를 읽는다.",
+ "gate_2_1_same_checkpoint": {
+  "arm1": {
+   "sha256_256": "739b458578f9240dc3d428a8a5c3b36904f05757b4ea1511546518a2fd064ee3",
+   "sha256_512": "739b458578f9240dc3d428a8a5c3b36904f05757b4ea1511546518a2fd064ee3",
+   "same": true
+  },
+  "arm3": {
+   "sha256_256": "9be380d4fb86e319abe4b0fc3ea8398453c00511094c422be7b75a04ada6e7e8",
+   "sha256_512": "9be380d4fb86e319abe4b0fc3ea8398453c00511094c422be7b75a04ada6e7e8",
+   "same": true
+  }
+ },
+ "admissible": true,
+ "by_cell": {
+  "arm1/none": {
+   "cap256": {
+    "n": 313,
+    "heuristic": 7,
+    "real_cap": 4,
+    "n_hit_cap": 4,
+    "hit_cap_rate": 0.012779552715654952,
+    "learned_eos": 3,
+    "cap_rate": 0.012779552715654952,
+    "cap_ci": [
+     0.004980557386257441,
+     0.03239332281129238
+    ],
+    "eos_rate": 0.009584664536741214,
+    "eos_ci": [
+     0.0032648420563690227,
+     0.027796735716246697
+    ],
+    "refusal_included": 0.9776357827476039,
+    "refusal_excluded": 0.9967320261437909,
+    "n_excluded_denom": 306
+   },
+   "cap512": {
+    "n": 313,
+    "heuristic": 5,
+    "real_cap": 0,
+    "n_hit_cap": 0,
+    "hit_cap_rate": 0.0,
+    "learned_eos": 5,
+    "cap_rate": 0.0,
+    "cap_ci": [
+     0.0,
+     0.01212467049781342
+    ],
+    "eos_rate": 0.01597444089456869,
+    "eos_ci": [
+     0.006842028580826057,
+     0.03684415404165786
+    ],
+    "refusal_included": 0.9776357827476039,
+    "refusal_excluded": 0.9935064935064936,
+    "n_excluded_denom": 308
+   }
+  },
+  "arm1/agreeable": {
+   "cap256": {
+    "n": 313,
+    "heuristic": 73,
+    "real_cap": 65,
+    "n_hit_cap": 67,
+    "hit_cap_rate": 0.21405750798722045,
+    "learned_eos": 8,
+    "cap_rate": 0.20766773162939298,
+    "cap_ci": [
+     0.16640615270596026,
+     0.2560181754125696
+    ],
+    "eos_rate": 0.025559105431309903,
+    "eos_ci": [
+     0.013006746826345159,
+     0.04961634307094105
+    ],
+    "refusal_included": 0.6261980830670927,
+    "refusal_excluded": 0.8125,
+    "n_excluded_denom": 240
+   },
+   "cap512": {
+    "n": 313,
+    "heuristic": 37,
+    "real_cap": 15,
+    "n_hit_cap": 16,
+    "hit_cap_rate": 0.051118210862619806,
+    "learned_eos": 22,
+    "cap_rate": 0.04792332268370607,
+    "cap_ci": [
+     0.029253974598496154,
+     0.07755523227332875
+    ],
+    "eos_rate": 0.07028753993610223,
+    "eos_ci": [
+     0.046871473576274005,
+     0.10412385027008961
+    ],
+    "refusal_included": 0.6261980830670927,
+    "refusal_excluded": 0.7101449275362319,
+    "n_excluded_denom": 276
+   }
+  },
+  "arm3/none": {
+   "cap256": {
+    "n": 313,
+    "heuristic": 5,
+    "real_cap": 2,
+    "n_hit_cap": 2,
+    "hit_cap_rate": 0.006389776357827476,
+    "learned_eos": 3,
+    "cap_rate": 0.006389776357827476,
+    "cap_ci": [
+     0.0017540229665585928,
+     0.022995252381123023
+    ],
+    "eos_rate": 0.009584664536741214,
+    "eos_ci": [
+     0.0032648420563690227,
+     0.027796735716246697
+    ],
+    "refusal_included": 0.9840255591054313,
+    "refusal_excluded": 0.9967532467532467,
+    "n_excluded_denom": 308
+   },
+   "cap512": {
+    "n": 313,
+    "heuristic": 5,
+    "real_cap": 0,
+    "n_hit_cap": 0,
+    "hit_cap_rate": 0.0,
+    "learned_eos": 5,
+    "cap_rate": 0.0,
+    "cap_ci": [
+     0.0,
+     0.01212467049781342
+    ],
+    "eos_rate": 0.01597444089456869,
+    "eos_ci": [
+     0.006842028580826057,
+     0.03684415404165786
+    ],
+    "refusal_included": 0.9840255591054313,
+    "refusal_excluded": 0.9967532467532467,
+    "n_excluded_denom": 308
+   }
+  },
+  "arm3/agreeable": {
+   "cap256": {
+    "n": 313,
+    "heuristic": 93,
+    "real_cap": 87,
+    "n_hit_cap": 90,
+    "hit_cap_rate": 0.28753993610223644,
+    "learned_eos": 6,
+    "cap_rate": 0.2779552715654952,
+    "cap_ci": [
+     0.23124483296649823,
+     0.3300501485005819
+    ],
+    "eos_rate": 0.019169329073482427,
+    "eos_ci": [
+     0.008814239602037598,
+     0.04118424544538042
+    ],
+    "refusal_included": 0.597444089456869,
+    "refusal_excluded": 0.8454545454545455,
+    "n_excluded_denom": 220
+   },
+   "cap512": {
+    "n": 313,
+    "heuristic": 48,
+    "real_cap": 12,
+    "n_hit_cap": 12,
+    "hit_cap_rate": 0.038338658146964855,
+    "learned_eos": 36,
+    "cap_rate": 0.038338658146964855,
+    "cap_ci": [
+     0.02206484370174629,
+     0.06580745589527633
+    ],
+    "eos_rate": 0.11501597444089456,
+    "eos_ci": [
+     0.0842447344327672,
+     0.1551228233626738
+    ],
+    "refusal_included": 0.597444089456869,
+    "refusal_excluded": 0.7018867924528301,
+    "n_excluded_denom": 265
+   }
+  }
+ },
+ "reference_env76_pair_different_checkpoints": {
+  "arm0/none": {
+   "cap256": {
+    "n": 313,
+    "heuristic": 9,
+    "real_cap": 9,
+    "n_hit_cap": 10,
+    "hit_cap_rate": 0.03194888178913738,
+    "learned_eos": 0,
+    "cap_rate": 0.02875399361022364,
+    "cap_ci": [
+     0.01519973019453721,
+     0.053735662127683104
+    ],
+    "eos_rate": 0.0,
+    "eos_ci": [
+     0.0,
+     0.01212467049781342
+    ],
+    "refusal_included": 0.9488817891373802,
+    "refusal_excluded": 0.9638157894736842,
+    "n_excluded_denom": 304
+   },
+   "cap512": {
+    "n": 313,
+    "heuristic": 5,
+    "real_cap": 5,
+    "n_hit_cap": 5,
+    "hit_cap_rate": 0.01597444089456869,
+    "learned_eos": 0,
+    "cap_rate": 0.01597444089456869,
+    "cap_ci": [
+     0.006842028580826057,
+     0.03684415404165786
+    ],
+    "eos_rate": 0.0,
+    "eos_ci": [
+     0.0,
+     0.01212467049781342
+    ],
+    "refusal_included": 0.9488817891373802,
+    "refusal_excluded": 0.9577922077922078,
+    "n_excluded_denom": 308
+   }
+  },
+  "arm0/agreeable": {
+   "cap256": {
+    "n": 313,
+    "heuristic": 17,
+    "real_cap": 17,
+    "n_hit_cap": 19,
+    "hit_cap_rate": 0.06070287539936102,
+    "learned_eos": 0,
+    "cap_rate": 0.054313099041533544,
+    "cap_ci": [
+     0.03418334289137506,
+     0.08525046883031805
+    ],
+    "eos_rate": 0.0,
+    "eos_ci": [
+     0.0,
+     0.01212467049781342
+    ],
+    "refusal_included": 0.9456869009584664,
+    "refusal_excluded": 0.9898648648648649,
+    "n_excluded_denom": 296
+   },
+   "cap512": {
+    "n": 313,
+    "heuristic": 5,
+    "real_cap": 5,
+    "n_hit_cap": 5,
+    "hit_cap_rate": 0.01597444089456869,
+    "learned_eos": 0,
+    "cap_rate": 0.01597444089456869,
+    "cap_ci": [
+     0.006842028580826057,
+     0.03684415404165786
+    ],
+    "eos_rate": 0.0,
+    "eos_ci": [
+     0.0,
+     0.01212467049781342
+    ],
+    "refusal_included": 0.9456869009584664,
+    "refusal_excluded": 0.961038961038961,
+    "n_excluded_denom": 308
+   }
+  },
+  "arm1/none": {
+   "cap256": {
+    "n": 313,
+    "heuristic": 10,
+    "real_cap": 6,
+    "n_hit_cap": 6,
+    "hit_cap_rate": 0.019169329073482427,
+    "learned_eos": 4,
+    "cap_rate": 0.019169329073482427,
+    "cap_ci": [
+     0.008814239602037598,
+     0.04118424544538042
+    ],
+    "eos_rate": 0.012779552715654952,
+    "eos_ci": [
+     0.004980557386257441,
+     0.03239332281129238
+    ],
+    "refusal_included": 0.9648562300319489,
+    "refusal_excluded": 0.9933993399339934,
+    "n_excluded_denom": 303
+   },
+   "cap512": {
+    "n": 313,
+    "heuristic": 6,
+    "real_cap": 0,
+    "n_hit_cap": 0,
+    "hit_cap_rate": 0.0,
+    "learned_eos": 6,
+    "cap_rate": 0.0,
+    "cap_ci": [
+     0.0,
+     0.01212467049781342
+    ],
+    "eos_rate": 0.019169329073482427,
+    "eos_ci": [
+     0.008814239602037598,
+     0.04118424544538042
+    ],
+    "refusal_included": 0.9776357827476039,
+    "refusal_excluded": 0.996742671009772,
+    "n_excluded_denom": 307
+   }
+  },
+  "arm1/agreeable": {
+   "cap256": {
+    "n": 313,
+    "heuristic": 78,
+    "real_cap": 74,
+    "n_hit_cap": 77,
+    "hit_cap_rate": 0.24600638977635783,
+    "learned_eos": 4,
+    "cap_rate": 0.2364217252396166,
+    "cap_ci": [
+     0.19272363005349136,
+     0.2865114198894454
+    ],
+    "eos_rate": 0.012779552715654952,
+    "eos_ci": [
+     0.004980557386257441,
+     0.03239332281129238
+    ],
+    "refusal_included": 0.5942492012779552,
+    "refusal_excluded": 0.7872340425531915,
+    "n_excluded_denom": 235
+   },
+   "cap512": {
+    "n": 313,
+    "heuristic": 51,
+    "real_cap": 3,
+    "n_hit_cap": 3,
+    "hit_cap_rate": 0.009584664536741214,
+    "learned_eos": 48,
+    "cap_rate": 0.009584664536741214,
+    "cap_ci": [
+     0.0032648420563690227,
+     0.027796735716246697
+    ],
+    "eos_rate": 0.15335463258785942,
+    "eos_ci": [
+     0.117659027143619,
+     0.19745615975103117
+    ],
+    "refusal_included": 0.6038338658146964,
+    "refusal_excluded": 0.7213740458015268,
+    "n_excluded_denom": 262
+   }
+  },
+  "arm2/none": {
+   "cap256": {
+    "n": 313,
+    "heuristic": 5,
+    "real_cap": 2,
+    "n_hit_cap": 2,
+    "hit_cap_rate": 0.006389776357827476,
+    "learned_eos": 3,
+    "cap_rate": 0.006389776357827476,
+    "cap_ci": [
+     0.0017540229665585928,
+     0.022995252381123023
+    ],
+    "eos_rate": 0.009584664536741214,
+    "eos_ci": [
+     0.0032648420563690227,
+     0.027796735716246697
+    ],
+    "refusal_included": 0.9552715654952076,
+    "refusal_excluded": 0.9675324675324676,
+    "n_excluded_denom": 308
+   },
+   "cap512": {
+    "n": 313,
+    "heuristic": 2,
+    "real_cap": 0,
+    "n_hit_cap": 0,
+    "hit_cap_rate": 0.0,
+    "learned_eos": 2,
+    "cap_rate": 0.0,
+    "cap_ci": [
+     0.0,
+     0.01212467049781342
+    ],
+    "eos_rate": 0.006389776357827476,
+    "eos_ci": [
+     0.0017540229665585928,
+     0.022995252381123023
+    ],
+    "refusal_included": 0.9488817891373802,
+    "refusal_excluded": 0.9517684887459807,
+    "n_excluded_denom": 311
+   }
+  },
+  "arm2/agreeable": {
+   "cap256": {
+    "n": 313,
+    "heuristic": 6,
+    "real_cap": 5,
+    "n_hit_cap": 5,
+    "hit_cap_rate": 0.01597444089456869,
+    "learned_eos": 1,
+    "cap_rate": 0.01597444089456869,
+    "cap_ci": [
+     0.006842028580826057,
+     0.03684415404165786
+    ],
+    "eos_rate": 0.003194888178913738,
+    "eos_ci": [
+     0.0005641844999816053,
+     0.017872788422765913
+    ],
+    "refusal_included": 0.9808306709265175,
+    "refusal_excluded": 0.996742671009772,
+    "n_excluded_denom": 307
+   },
+   "cap512": {
+    "n": 313,
+    "heuristic": 7,
+    "real_cap": 4,
+    "n_hit_cap": 4,
+    "hit_cap_rate": 0.012779552715654952,
+    "learned_eos": 3,
+    "cap_rate": 0.012779552715654952,
+    "cap_ci": [
+     0.004980557386257441,
+     0.03239332281129238
+    ],
+    "eos_rate": 0.009584664536741214,
+    "eos_ci": [
+     0.0032648420563690227,
+     0.027796735716246697
+    ],
+    "refusal_included": 0.9297124600638977,
+    "refusal_excluded": 0.9477124183006536,
+    "n_excluded_denom": 306
+   }
+  },
+  "arm3/none": {
+   "cap256": {
+    "n": 313,
+    "heuristic": 5,
+    "real_cap": 3,
+    "n_hit_cap": 3,
+    "hit_cap_rate": 0.009584664536741214,
+    "learned_eos": 2,
+    "cap_rate": 0.009584664536741214,
+    "cap_ci": [
+     0.0032648420563690227,
+     0.027796735716246697
+    ],
+    "eos_rate": 0.006389776357827476,
+    "eos_ci": [
+     0.0017540229665585928,
+     0.022995252381123023
+    ],
+    "refusal_included": 0.9840255591054313,
+    "refusal_excluded": 0.9967532467532467,
+    "n_excluded_denom": 308
+   },
+   "cap512": {
+    "n": 313,
+    "heuristic": 5,
+    "real_cap": 0,
+    "n_hit_cap": 0,
+    "hit_cap_rate": 0.0,
+    "learned_eos": 5,
+    "cap_rate": 0.0,
+    "cap_ci": [
+     0.0,
+     0.01212467049781342
+    ],
+    "eos_rate": 0.01597444089456869,
+    "eos_ci": [
+     0.006842028580826057,
+     0.03684415404165786
+    ],
+    "refusal_included": 0.987220447284345,
+    "refusal_excluded": 0.9967532467532467,
+    "n_excluded_denom": 308
+   }
+  },
+  "arm3/agreeable": {
+   "cap256": {
+    "n": 313,
+    "heuristic": 94,
+    "real_cap": 92,
+    "n_hit_cap": 96,
+    "hit_cap_rate": 0.30670926517571884,
+    "learned_eos": 2,
+    "cap_rate": 0.2939297124600639,
+    "cap_ci": [
+     0.2462033863254715,
+     0.346653107266279
+    ],
+    "eos_rate": 0.006389776357827476,
+    "eos_ci": [
+     0.0017540229665585928,
+     0.022995252381123023
+    ],
+    "refusal_included": 0.5910543130990416,
+    "refusal_excluded": 0.8401826484018264,
+    "n_excluded_denom": 219
+   },
+   "cap512": {
+    "n": 313,
+    "heuristic": 88,
+    "real_cap": 1,
+    "n_hit_cap": 1,
+    "hit_cap_rate": 0.003194888178913738,
+    "learned_eos": 87,
+    "cap_rate": 0.003194888178913738,
+    "cap_ci": [
+     0.0005641844999816053,
+     0.017872788422765913
+    ],
+    "eos_rate": 0.2779552715654952,
+    "eos_ci": [
+     0.23124483296649823,
+     0.3300501485005819
+    ],
+    "refusal_included": 0.5207667731629393,
+    "refusal_excluded": 0.72,
+    "n_excluded_denom": 225
+   }
+  }
+ }
+}

@@ -1,0 +1,279 @@
+{
+ "what": "같은 (arm, round, seed)가 두 코호트에서 같은 가중치였는지 — 저장된 응답으로 되묻는다",
+ "why_this_works": "생성이 temperature=0.0 그리디이므로 같은 가중치는 바이트까지 같은 응답을 낸다. 낮은 상한에서 상한에 닿은 응답은 제외한다 — 그것만 높은 상한에서 더 이어지는 게 정상이다.",
+ "control": "arm0는 어댑터가 없어 재학습이 없다. 100%가 아니면 이 검사 자체가 틀린 것이다.",
+ "ceiling": "가중치를 직접 해싱하지 않는다. 신규 실행의 가중치 신원은 eval JSON의 ckpt_fingerprint가 맡는다.",
+ "too_short_chars": 40,
+ "lenses": [
+  "none",
+  "agreeable"
+ ],
+ "pairs": [
+  {
+   "low_cap": "_env76",
+   "high_cap": "_env76_max512",
+   "cells": [
+    {
+     "arm": "arm0",
+     "round": 0.0,
+     "seed": 42,
+     "retrained": false,
+     "max_new_tokens": [
+      256,
+      512
+     ],
+     "low_cap_file": "eval_arm0_r0_s42_env76.json",
+     "high_cap_file": "eval_arm0_r0_s42_env76_max512.json",
+     "status": "available",
+     "lenses": {
+      "none": {
+       "n": 313,
+       "n_compared": 303,
+       "n_byte_identical": 303,
+       "byte_identical_rate": 1.0,
+       "too_short_low_cap": 130,
+       "too_short_high_cap": 130
+      },
+      "agreeable": {
+       "n": 313,
+       "n_compared": 294,
+       "n_byte_identical": 294,
+       "byte_identical_rate": 1.0,
+       "too_short_low_cap": 104,
+       "too_short_high_cap": 104
+      }
+     }
+    },
+    {
+     "arm": "arm1",
+     "round": 3.0,
+     "seed": 42,
+     "retrained": true,
+     "max_new_tokens": [
+      256,
+      512
+     ],
+     "low_cap_file": "eval_arm1_r3_s42_env76.json",
+     "high_cap_file": "eval_arm1_r3_s42_env76_max512.json",
+     "status": "available",
+     "lenses": {
+      "none": {
+       "n": 313,
+       "n_compared": 307,
+       "n_byte_identical": 73,
+       "byte_identical_rate": 0.23778501628664495,
+       "too_short_low_cap": 178,
+       "too_short_high_cap": 74
+      },
+      "agreeable": {
+       "n": 313,
+       "n_compared": 236,
+       "n_byte_identical": 89,
+       "byte_identical_rate": 0.3771186440677966,
+       "too_short_low_cap": 110,
+       "too_short_high_cap": 77
+      }
+     }
+    },
+    {
+     "arm": "arm2",
+     "round": 3.0,
+     "seed": 42,
+     "retrained": true,
+     "max_new_tokens": [
+      256,
+      512
+     ],
+     "low_cap_file": "eval_arm2_r3_s42_env76.json",
+     "high_cap_file": "eval_arm2_r3_s42_env76_max512.json",
+     "status": "available",
+     "lenses": {
+      "none": {
+       "n": 313,
+       "n_compared": 311,
+       "n_byte_identical": 63,
+       "byte_identical_rate": 0.20257234726688103,
+       "too_short_low_cap": 229,
+       "too_short_high_cap": 125
+      },
+      "agreeable": {
+       "n": 313,
+       "n_compared": 308,
+       "n_byte_identical": 93,
+       "byte_identical_rate": 0.30194805194805197,
+       "too_short_low_cap": 232,
+       "too_short_high_cap": 127
+      }
+     }
+    },
+    {
+     "arm": "arm3",
+     "round": 3.0,
+     "seed": 42,
+     "retrained": true,
+     "max_new_tokens": [
+      256,
+      512
+     ],
+     "low_cap_file": "eval_arm3_r3_s42_env76.json",
+     "high_cap_file": "eval_arm3_r3_s42_env76_max512.json",
+     "status": "available",
+     "lenses": {
+      "none": {
+       "n": 313,
+       "n_compared": 310,
+       "n_byte_identical": 111,
+       "byte_identical_rate": 0.3580645161290323,
+       "too_short_low_cap": 100,
+       "too_short_high_cap": 48
+      },
+      "agreeable": {
+       "n": 313,
+       "n_compared": 217,
+       "n_byte_identical": 48,
+       "byte_identical_rate": 0.22119815668202766,
+       "too_short_low_cap": 125,
+       "too_short_high_cap": 55
+      }
+     }
+    }
+   ]
+  },
+  {
+   "low_cap": "_r10_1b_lora_env76",
+   "high_cap": "_r10_1b_lora_max512",
+   "cells": [
+    {
+     "arm": "arm1",
+     "round": 3.0,
+     "seed": 42,
+     "retrained": true,
+     "max_new_tokens": [
+      256,
+      512
+     ],
+     "low_cap_file": "eval_arm1_r3_s42_r10_1b_lora_env76.json",
+     "high_cap_file": "eval_arm1_r3_s42_r10_1b_lora_max512.json",
+     "status": "available",
+     "lenses": {
+      "none": {
+       "n": 313,
+       "n_compared": 247,
+       "n_byte_identical": 95,
+       "byte_identical_rate": 0.38461538461538464,
+       "too_short_low_cap": 70,
+       "too_short_high_cap": 61
+      },
+      "agreeable": {
+       "n": 313,
+       "n_compared": 268,
+       "n_byte_identical": 93,
+       "byte_identical_rate": 0.34701492537313433,
+       "too_short_low_cap": 54,
+       "too_short_high_cap": 50
+      }
+     }
+    },
+    {
+     "arm": "arm2",
+     "round": 3.0,
+     "seed": 42,
+     "retrained": true,
+     "max_new_tokens": [
+      256,
+      512
+     ],
+     "low_cap_file": "eval_arm2_r3_s42_r10_1b_lora_env76.json",
+     "high_cap_file": "eval_arm2_r3_s42_r10_1b_lora_max512.json",
+     "status": "available",
+     "lenses": {
+      "none": {
+       "n": 313,
+       "n_compared": 283,
+       "n_byte_identical": 159,
+       "byte_identical_rate": 0.5618374558303887,
+       "too_short_low_cap": 44,
+       "too_short_high_cap": 68
+      },
+      "agreeable": {
+       "n": 313,
+       "n_compared": 308,
+       "n_byte_identical": 158,
+       "byte_identical_rate": 0.512987012987013,
+       "too_short_low_cap": 40,
+       "too_short_high_cap": 78
+      }
+     }
+    }
+   ]
+  },
+  {
+   "low_cap": "_r10_1b_full_env76",
+   "high_cap": "_r10_1b_full_max512",
+   "cells": [
+    {
+     "arm": "arm1",
+     "round": 3.0,
+     "seed": 42,
+     "retrained": true,
+     "max_new_tokens": [
+      256,
+      512
+     ],
+     "low_cap_file": "eval_arm1_r3_s42_r10_1b_full_env76.json",
+     "high_cap_file": "eval_arm1_r3_s42_r10_1b_full_max512.json",
+     "status": "available",
+     "lenses": {
+      "none": {
+       "n": 313,
+       "n_compared": 241,
+       "n_byte_identical": 132,
+       "byte_identical_rate": 0.5477178423236515,
+       "too_short_low_cap": 3,
+       "too_short_high_cap": 4
+      },
+      "agreeable": {
+       "n": 313,
+       "n_compared": 297,
+       "n_byte_identical": 123,
+       "byte_identical_rate": 0.41414141414141414,
+       "too_short_low_cap": 4,
+       "too_short_high_cap": 7
+      }
+     }
+    },
+    {
+     "arm": "arm2",
+     "round": 3.0,
+     "seed": 42,
+     "retrained": true,
+     "max_new_tokens": [
+      256,
+      512
+     ],
+     "low_cap_file": "eval_arm2_r3_s42_r10_1b_full_env76.json",
+     "high_cap_file": "eval_arm2_r3_s42_r10_1b_full_max512.json",
+     "status": "available",
+     "lenses": {
+      "none": {
+       "n": 313,
+       "n_compared": 272,
+       "n_byte_identical": 155,
+       "byte_identical_rate": 0.5698529411764706,
+       "too_short_low_cap": 51,
+       "too_short_high_cap": 43
+      },
+      "agreeable": {
+       "n": 313,
+       "n_compared": 306,
+       "n_byte_identical": 155,
+       "byte_identical_rate": 0.5065359477124183,
+       "too_short_low_cap": 36,
+       "too_short_high_cap": 32
+      }
+     }
+    }
+   ]
+  }
+ ]
+}

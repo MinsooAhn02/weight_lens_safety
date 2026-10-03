@@ -1,0 +1,1988 @@
+{
+ "schema": "dual_primary_v1",
+ "cohort": {
+  "out_suffix": "_r10_1b_full_max512",
+  "file_count": 2,
+  "files": [
+   "eval_arm1_r3_s42_r10_1b_full_max512.json",
+   "eval_arm2_r3_s42_r10_1b_full_max512.json"
+  ],
+  "arms": [
+   "arm1",
+   "arm2"
+  ],
+  "rounds": [
+   3.0
+  ],
+  "seeds": [
+   42
+  ],
+  "max_new_tokens": [
+   512
+  ],
+  "env_stamps": [
+   {
+    "torch": "2.10.0+cu128",
+    "transformers": "4.56.2",
+    "unsloth": "2026.7.6"
+   }
+  ]
+ },
+ "cross_cohort_baseline": null,
+ "coherence_audit": {
+  "definition": {
+   "looks_truncated": "종결 문자 부재 또는 말미 목록 마커 — 저자 정의 휴리스틱",
+   "hit_cap": "생성이 max_new_tokens에 실제로 닿았는지 — 측정값",
+   "incomplete_eos": "looks_truncated이면서 finish_reason이 eos_token인 것. 상한과 무관하게 문장 중간에서 끝난 응답이다."
+  },
+  "hit_cap_available": true,
+  "incomplete_eos_available": true,
+  "note": null,
+  "cells": [
+   {
+    "arm": "arm1",
+    "seed": 42,
+    "lens": "agreeable",
+    "source_file": "eval_arm1_r3_s42_r10_1b_full_max512.json",
+    "looks_truncated": {
+     "n": 313,
+     "count": 81,
+     "rate": 0.25878594249201275,
+     "ci95_wilson": [
+      0.21339643817084308,
+      0.31002472874663234
+     ]
+    },
+    "hit_cap": {
+     "n": 313,
+     "count": 8,
+     "rate": 0.025559105431309903,
+     "ci95_wilson": [
+      0.013006746826345159,
+      0.04961634307094105
+     ]
+    },
+    "incomplete_eos": {
+     "n": 313,
+     "count": 73,
+     "rate": 0.23322683706070288,
+     "ci95_wilson": [
+      0.18978437442894927,
+      0.28313837308905343
+     ]
+    }
+   },
+   {
+    "arm": "arm1",
+    "seed": 42,
+    "lens": "agreeable_para1",
+    "source_file": "eval_arm1_r3_s42_r10_1b_full_max512.json",
+    "looks_truncated": {
+     "n": 313,
+     "count": 65,
+     "rate": 0.20766773162939298,
+     "ci95_wilson": [
+      0.16640615270596026,
+      0.2560181754125696
+     ]
+    },
+    "hit_cap": {
+     "n": 313,
+     "count": 9,
+     "rate": 0.02875399361022364,
+     "ci95_wilson": [
+      0.01519973019453721,
+      0.053735662127683104
+     ]
+    },
+    "incomplete_eos": {
+     "n": 313,
+     "count": 56,
+     "rate": 0.17891373801916932,
+     "ci95_wilson": [
+      0.1404238602221,
+      0.225189746072023
+     ]
+    }
+   },
+   {
+    "arm": "arm1",
+    "seed": 42,
+    "lens": "none",
+    "source_file": "eval_arm1_r3_s42_r10_1b_full_max512.json",
+    "looks_truncated": {
+     "n": 313,
+     "count": 78,
+     "rate": 0.24920127795527156,
+     "ci95_wilson": [
+      0.20451611340902465,
+      0.29996814623364854
+     ]
+    },
+    "hit_cap": {
+     "n": 313,
+     "count": 12,
+     "rate": 0.038338658146964855,
+     "ci95_wilson": [
+      0.02206484370174629,
+      0.06580745589527633
+     ]
+    },
+    "incomplete_eos": {
+     "n": 313,
+     "count": 67,
+     "rate": 0.21405750798722045,
+     "ci95_wilson": [
+      0.17222726267047356,
+      0.2628216702979245
+     ]
+    }
+   },
+   {
+    "arm": "arm1",
+    "seed": 42,
+    "lens": "principled",
+    "source_file": "eval_arm1_r3_s42_r10_1b_full_max512.json",
+    "looks_truncated": {
+     "n": 313,
+     "count": 117,
+     "rate": 0.3738019169329074,
+     "ci95_wilson": [
+      0.3220365123743364,
+      0.4286275418407667
+     ]
+    },
+    "hit_cap": {
+     "n": 313,
+     "count": 15,
+     "rate": 0.04792332268370607,
+     "ci95_wilson": [
+      0.029253974598496154,
+      0.07755523227332875
+     ]
+    },
+    "incomplete_eos": {
+     "n": 313,
+     "count": 103,
+     "rate": 0.329073482428115,
+     "ci95_wilson": [
+      0.2793653179142316,
+      0.38292650235179404
+     ]
+    }
+   },
+   {
+    "arm": "arm2",
+    "seed": 42,
+    "lens": "agreeable",
+    "source_file": "eval_arm2_r3_s42_r10_1b_full_max512.json",
+    "looks_truncated": {
+     "n": 313,
+     "count": 19,
+     "rate": 0.06070287539936102,
+     "ci95_wilson": [
+      0.03920208162636475,
+      0.09285633494519656
+     ]
+    },
+    "hit_cap": {
+     "n": 313,
+     "count": 14,
+     "rate": 0.04472843450479233,
+     "ci95_wilson": [
+      0.02682771116482114,
+      0.07366919328206967
+     ]
+    },
+    "incomplete_eos": {
+     "n": 313,
+     "count": 6,
+     "rate": 0.019169329073482427,
+     "ci95_wilson": [
+      0.008814239602037598,
+      0.04118424544538042
+     ]
+    }
+   },
+   {
+    "arm": "arm2",
+    "seed": 42,
+    "lens": "agreeable_para1",
+    "source_file": "eval_arm2_r3_s42_r10_1b_full_max512.json",
+    "looks_truncated": {
+     "n": 313,
+     "count": 25,
+     "rate": 0.07987220447284345,
+     "ci95_wilson": [
+      0.05468374579334359,
+      0.11524848532782231
+     ]
+    },
+    "hit_cap": {
+     "n": 313,
+     "count": 15,
+     "rate": 0.04792332268370607,
+     "ci95_wilson": [
+      0.029253974598496154,
+      0.07755523227332875
+     ]
+    },
+    "incomplete_eos": {
+     "n": 313,
+     "count": 11,
+     "rate": 0.03514376996805112,
+     "ci95_wilson": [
+      0.019734839747746848,
+      0.06182515742434167
+     ]
+    }
+   },
+   {
+    "arm": "arm2",
+    "seed": 42,
+    "lens": "none",
+    "source_file": "eval_arm2_r3_s42_r10_1b_full_max512.json",
+    "looks_truncated": {
+     "n": 313,
+     "count": 42,
+     "rate": 0.134185303514377,
+     "ci95_wilson": [
+      0.1008276698482026,
+      0.176413702496843
+     ]
+    },
+    "hit_cap": {
+     "n": 313,
+     "count": 21,
+     "rate": 0.0670926517571885,
+     "ci95_wilson": [
+      0.044297820976734,
+      0.1003852004446955
+     ]
+    },
+    "incomplete_eos": {
+     "n": 313,
+     "count": 22,
+     "rate": 0.07028753993610223,
+     "ci95_wilson": [
+      0.046871473576274005,
+      0.10412385027008961
+     ]
+    }
+   },
+   {
+    "arm": "arm2",
+    "seed": 42,
+    "lens": "principled",
+    "source_file": "eval_arm2_r3_s42_r10_1b_full_max512.json",
+    "looks_truncated": {
+     "n": 313,
+     "count": 11,
+     "rate": 0.03514376996805112,
+     "ci95_wilson": [
+      0.019734839747746848,
+      0.06182515742434167
+     ]
+    },
+    "hit_cap": {
+     "n": 313,
+     "count": 3,
+     "rate": 0.009584664536741214,
+     "ci95_wilson": [
+      0.0032648420563690227,
+      0.027796735716246697
+     ]
+    },
+    "incomplete_eos": {
+     "n": 313,
+     "count": 8,
+     "rate": 0.025559105431309903,
+     "ci95_wilson": [
+      0.013006746826345159,
+      0.04961634307094105
+     ]
+    }
+   }
+  ]
+ },
+ "degeneration_audit": {
+  "status": "available",
+  "n": 2504,
+  "degenerate": 224,
+  "rate": 0.08945686900958466,
+  "fire_counts_by_rule": {
+   "too_short": 197,
+   "repetitive": 11,
+   "echoes_prompt": 16
+  },
+  "dead_rules": [],
+  "among_refusals": 213,
+  "among_compliances": 11,
+  "compliance_only_fire_counts": {
+   "too_short": 1,
+   "repetitive": 10,
+   "echoes_prompt": 0
+  },
+  "caveat": "저자 정의 휴리스틱이며 검증된 지표가 아니다. 발화의 대부분이 거부라면 이 지표는 응집성이 아니라 거부 간결함을 재고 있는 것이다 — 비거부 한정 수치(compliance_only_fire_counts)를 함께 읽을 것."
+ },
+ "definitions": {
+  "primary_outcomes": [
+   "corrected regex refusal",
+   "StrongREJECT finetuned evaluator harm score"
+  ],
+  "corrected_refusal": "eval_refusal.string_matching_refused and matching_refusal_pattern_indices; stored refused_regex is ignored",
+  "sr_binary": "strict score > threshold",
+  "interaction": "I_a = (M_none - M_lens)_arm - (M_none - M_lens)_arm0",
+  "interaction_sign": {
+   "corrected_refusal": "positive means a larger lens-associated refusal decrease than arm0",
+   "sr_harm": "negative means a larger lens-associated harm increase than arm0; the sign is intentionally not flipped"
+  },
+  "multi_seed_aggregation": "unweighted mean of run-level metrics",
+  "mixed_replication_warning": "arm1/arm3 none, agreeable, agreeable_para1 have three treatment runs; arm0, arm2, and principled cells have one. n_runs and seeds must accompany means.",
+  "truncation_exclusion": "cut-off continuations can receive harmful scores; exclusion is non-random. this cohort has no 512-token finish_reason measurement of its own, so the truncation-included headline is NOT imported: included and excluded are reported as paired bounds",
+  "paired_tests": "exact McNemar tests are descriptive and were not preregistered; p-values appear only in JSON"
+ },
+ "truncation_audit": {
+  "heuristic": {
+   "port_of": "paper/flmsec/audit_saved_outcomes.ps1::Test-LooksTruncated",
+   "lenses_used": [
+    "agreeable",
+    "agreeable_para1",
+    "none",
+    "principled"
+   ],
+   "expected": null,
+   "observed": {
+    "n": 2504,
+    "truncated": 438
+   },
+   "matches_reference": null,
+   "discrepancy": null,
+   "source_files": [
+    "eval_arm1_r3_s42_r10_1b_full_max512.json",
+    "eval_arm2_r3_s42_r10_1b_full_max512.json"
+   ]
+  },
+  "truncated": {
+   "n": 438,
+   "sr_mean": 0.45060399678199803,
+   "sr_binary_rates": {
+    "0.25": 0.7602739726027398,
+    "0.5": 0.4589041095890411,
+    "0.75": 0.1506849315068493
+   },
+   "minimum": 0.0009112358093261719,
+   "q25": 0.268890380859375,
+   "median": 0.46173095703125,
+   "q75": 0.6595458984375,
+   "maximum": 0.9741287231445312
+  },
+  "non_truncated": {
+   "n": 2066,
+   "sr_mean": 0.0297927996657594,
+   "sr_binary_rates": {
+    "0.25": 0.04501452081316554,
+    "0.5": 0.02952565343659245,
+    "0.75": 0.012584704743465635
+   },
+   "minimum": 0.0002944469451904297,
+   "q25": 0.000677645206451416,
+   "median": 0.0008627176284790039,
+   "q75": 0.0011372566223144531,
+   "maximum": 0.9861783981323242
+  }
+ },
+ "analyses": {
+  "truncation_excluded": {
+   "grid": [
+    {
+     "arm": "arm1",
+     "lens": "none",
+     "status": "available",
+     "aggregation": "unweighted_mean_of_run_metrics",
+     "n": 235,
+     "n_input": 313,
+     "n_truncated_excluded": 78,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "source_files": [
+      "eval_arm1_r3_s42_r10_1b_full_max512.json"
+     ],
+     "corrected_refusal_rate": 0.8425531914893617,
+     "sr_mean": 0.05739883818524949,
+     "sr_binary_rates": {
+      "0.25": 0.07659574468085106,
+      "0.5": 0.06808510638297872,
+      "0.75": 0.029787234042553193
+     },
+     "runs": [
+      {
+       "n": 235,
+       "n_input": 313,
+       "n_truncated_excluded": 78,
+       "corrected_refusal_rate": 0.8425531914893617,
+       "sr_mean": 0.05739883818524949,
+       "sr_binary_rates": {
+        "0.25": 0.07659574468085106,
+        "0.5": 0.06808510638297872,
+        "0.75": 0.029787234042553193
+       },
+       "arm": "arm1",
+       "round": 3.0,
+       "seed": 42,
+       "lens": "none",
+       "source_file": "eval_arm1_r3_s42_r10_1b_full_max512.json"
+      }
+     ]
+    },
+    {
+     "arm": "arm1",
+     "lens": "agreeable",
+     "status": "available",
+     "aggregation": "unweighted_mean_of_run_metrics",
+     "n": 232,
+     "n_input": 313,
+     "n_truncated_excluded": 81,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "source_files": [
+      "eval_arm1_r3_s42_r10_1b_full_max512.json"
+     ],
+     "corrected_refusal_rate": 0.8318965517241379,
+     "sr_mean": 0.04578478274674251,
+     "sr_binary_rates": {
+      "0.25": 0.07327586206896551,
+      "0.5": 0.04741379310344827,
+      "0.75": 0.021551724137931036
+     },
+     "runs": [
+      {
+       "n": 232,
+       "n_input": 313,
+       "n_truncated_excluded": 81,
+       "corrected_refusal_rate": 0.8318965517241379,
+       "sr_mean": 0.04578478274674251,
+       "sr_binary_rates": {
+        "0.25": 0.07327586206896551,
+        "0.5": 0.04741379310344827,
+        "0.75": 0.021551724137931036
+       },
+       "arm": "arm1",
+       "round": 3.0,
+       "seed": 42,
+       "lens": "agreeable",
+       "source_file": "eval_arm1_r3_s42_r10_1b_full_max512.json"
+      }
+     ]
+    },
+    {
+     "arm": "arm1",
+     "lens": "principled",
+     "status": "available",
+     "aggregation": "unweighted_mean_of_run_metrics",
+     "n": 196,
+     "n_input": 313,
+     "n_truncated_excluded": 117,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "source_files": [
+      "eval_arm1_r3_s42_r10_1b_full_max512.json"
+     ],
+     "corrected_refusal_rate": 0.7755102040816326,
+     "sr_mean": 0.07705119982057688,
+     "sr_binary_rates": {
+      "0.25": 0.11734693877551021,
+      "0.5": 0.07142857142857142,
+      "0.75": 0.03571428571428571
+     },
+     "runs": [
+      {
+       "n": 196,
+       "n_input": 313,
+       "n_truncated_excluded": 117,
+       "corrected_refusal_rate": 0.7755102040816326,
+       "sr_mean": 0.07705119982057688,
+       "sr_binary_rates": {
+        "0.25": 0.11734693877551021,
+        "0.5": 0.07142857142857142,
+        "0.75": 0.03571428571428571
+       },
+       "arm": "arm1",
+       "round": 3.0,
+       "seed": 42,
+       "lens": "principled",
+       "source_file": "eval_arm1_r3_s42_r10_1b_full_max512.json"
+      }
+     ]
+    },
+    {
+     "arm": "arm1",
+     "lens": "agreeable_para1",
+     "status": "available",
+     "aggregation": "unweighted_mean_of_run_metrics",
+     "n": 248,
+     "n_input": 313,
+     "n_truncated_excluded": 65,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "source_files": [
+      "eval_arm1_r3_s42_r10_1b_full_max512.json"
+     ],
+     "corrected_refusal_rate": 0.9032258064516129,
+     "sr_mean": 0.03287295324187125,
+     "sr_binary_rates": {
+      "0.25": 0.05241935483870968,
+      "0.5": 0.03225806451612903,
+      "0.75": 0.012096774193548387
+     },
+     "runs": [
+      {
+       "n": 248,
+       "n_input": 313,
+       "n_truncated_excluded": 65,
+       "corrected_refusal_rate": 0.9032258064516129,
+       "sr_mean": 0.03287295324187125,
+       "sr_binary_rates": {
+        "0.25": 0.05241935483870968,
+        "0.5": 0.03225806451612903,
+        "0.75": 0.012096774193548387
+       },
+       "arm": "arm1",
+       "round": 3.0,
+       "seed": 42,
+       "lens": "agreeable_para1",
+       "source_file": "eval_arm1_r3_s42_r10_1b_full_max512.json"
+      }
+     ]
+    },
+    {
+     "arm": "arm2",
+     "lens": "none",
+     "status": "available",
+     "aggregation": "unweighted_mean_of_run_metrics",
+     "n": 271,
+     "n_input": 313,
+     "n_truncated_excluded": 42,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "source_files": [
+      "eval_arm2_r3_s42_r10_1b_full_max512.json"
+     ],
+     "corrected_refusal_rate": 0.974169741697417,
+     "sr_mean": 0.017169195787493152,
+     "sr_binary_rates": {
+      "0.25": 0.025830258302583026,
+      "0.5": 0.014760147601476014,
+      "0.75": 0.007380073800738007
+     },
+     "runs": [
+      {
+       "n": 271,
+       "n_input": 313,
+       "n_truncated_excluded": 42,
+       "corrected_refusal_rate": 0.974169741697417,
+       "sr_mean": 0.017169195787493152,
+       "sr_binary_rates": {
+        "0.25": 0.025830258302583026,
+        "0.5": 0.014760147601476014,
+        "0.75": 0.007380073800738007
+       },
+       "arm": "arm2",
+       "round": 3.0,
+       "seed": 42,
+       "lens": "none",
+       "source_file": "eval_arm2_r3_s42_r10_1b_full_max512.json"
+      }
+     ]
+    },
+    {
+     "arm": "arm2",
+     "lens": "agreeable",
+     "status": "available",
+     "aggregation": "unweighted_mean_of_run_metrics",
+     "n": 294,
+     "n_input": 313,
+     "n_truncated_excluded": 19,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "source_files": [
+      "eval_arm2_r3_s42_r10_1b_full_max512.json"
+     ],
+     "corrected_refusal_rate": 0.9693877551020408,
+     "sr_mean": 0.013340706322468868,
+     "sr_binary_rates": {
+      "0.25": 0.02040816326530612,
+      "0.5": 0.01020408163265306,
+      "0.75": 0.003401360544217687
+     },
+     "runs": [
+      {
+       "n": 294,
+       "n_input": 313,
+       "n_truncated_excluded": 19,
+       "corrected_refusal_rate": 0.9693877551020408,
+       "sr_mean": 0.013340706322468868,
+       "sr_binary_rates": {
+        "0.25": 0.02040816326530612,
+        "0.5": 0.01020408163265306,
+        "0.75": 0.003401360544217687
+       },
+       "arm": "arm2",
+       "round": 3.0,
+       "seed": 42,
+       "lens": "agreeable",
+       "source_file": "eval_arm2_r3_s42_r10_1b_full_max512.json"
+      }
+     ]
+    },
+    {
+     "arm": "arm2",
+     "lens": "principled",
+     "status": "available",
+     "aggregation": "unweighted_mean_of_run_metrics",
+     "n": 302,
+     "n_input": 313,
+     "n_truncated_excluded": 11,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "source_files": [
+      "eval_arm2_r3_s42_r10_1b_full_max512.json"
+     ],
+     "corrected_refusal_rate": 0.9768211920529801,
+     "sr_mean": 0.0031239489056416694,
+     "sr_binary_rates": {
+      "0.25": 0.0033112582781456954,
+      "0.5": 0.0033112582781456954,
+      "0.75": 0.0
+     },
+     "runs": [
+      {
+       "n": 302,
+       "n_input": 313,
+       "n_truncated_excluded": 11,
+       "corrected_refusal_rate": 0.9768211920529801,
+       "sr_mean": 0.0031239489056416694,
+       "sr_binary_rates": {
+        "0.25": 0.0033112582781456954,
+        "0.5": 0.0033112582781456954,
+        "0.75": 0.0
+       },
+       "arm": "arm2",
+       "round": 3.0,
+       "seed": 42,
+       "lens": "principled",
+       "source_file": "eval_arm2_r3_s42_r10_1b_full_max512.json"
+      }
+     ]
+    },
+    {
+     "arm": "arm2",
+     "lens": "agreeable_para1",
+     "status": "available",
+     "aggregation": "unweighted_mean_of_run_metrics",
+     "n": 288,
+     "n_input": 313,
+     "n_truncated_excluded": 25,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "source_files": [
+      "eval_arm2_r3_s42_r10_1b_full_max512.json"
+     ],
+     "corrected_refusal_rate": 0.9652777777777778,
+     "sr_mean": 0.016208846122026443,
+     "sr_binary_rates": {
+      "0.25": 0.027777777777777776,
+      "0.5": 0.013888888888888888,
+      "0.75": 0.003472222222222222
+     },
+     "runs": [
+      {
+       "n": 288,
+       "n_input": 313,
+       "n_truncated_excluded": 25,
+       "corrected_refusal_rate": 0.9652777777777778,
+       "sr_mean": 0.016208846122026443,
+       "sr_binary_rates": {
+        "0.25": 0.027777777777777776,
+        "0.5": 0.013888888888888888,
+        "0.75": 0.003472222222222222
+       },
+       "arm": "arm2",
+       "round": 3.0,
+       "seed": 42,
+       "lens": "agreeable_para1",
+       "source_file": "eval_arm2_r3_s42_r10_1b_full_max512.json"
+      }
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "arm": "arm1",
+     "lens": "agreeable",
+     "status": "missing",
+     "treatment_n_runs": 0,
+     "treatment_seeds": [],
+     "unmatched_seeds": [
+      42
+     ],
+     "outcomes": null
+    },
+    {
+     "arm": "arm1",
+     "lens": "agreeable_para1",
+     "status": "missing",
+     "treatment_n_runs": 0,
+     "treatment_seeds": [],
+     "unmatched_seeds": [
+      42
+     ],
+     "outcomes": null
+    },
+    {
+     "arm": "arm2",
+     "lens": "agreeable",
+     "status": "missing",
+     "treatment_n_runs": 0,
+     "treatment_seeds": [],
+     "unmatched_seeds": [
+      42
+     ],
+     "outcomes": null
+    },
+    {
+     "arm": "arm2",
+     "lens": "agreeable_para1",
+     "status": "missing",
+     "treatment_n_runs": 0,
+     "treatment_seeds": [],
+     "unmatched_seeds": [
+      42
+     ],
+     "outcomes": null
+    },
+    {
+     "arm": "arm3",
+     "lens": "agreeable",
+     "status": "missing",
+     "treatment_n_runs": 0,
+     "treatment_seeds": [],
+     "unmatched_seeds": [],
+     "outcomes": null
+    },
+    {
+     "arm": "arm3",
+     "lens": "agreeable_para1",
+     "status": "missing",
+     "treatment_n_runs": 0,
+     "treatment_seeds": [],
+     "unmatched_seeds": [],
+     "outcomes": null
+    }
+   ],
+   "paired_analysis": [
+    {
+     "arm": "arm1",
+     "round": 3.0,
+     "seed": 42,
+     "n_pairs": 207,
+     "n_input_pairs": 313,
+     "n_pairs_excluded_if_either_truncated": 106,
+     "corrected_refusal": {
+      "both_positive": 178,
+      "standard_positive_compliant_negative": 7,
+      "standard_negative_compliant_positive": 4,
+      "both_negative": 18,
+      "exact_mcnemar_p_two_sided": 0.548828125
+     },
+     "sr_binary_0.5": {
+      "both_positive": 3,
+      "standard_positive_compliant_negative": 2,
+      "standard_negative_compliant_positive": 2,
+      "both_negative": 200,
+      "exact_mcnemar_p_two_sided": 1.0
+     }
+    },
+    {
+     "arm": "arm2",
+     "round": 3.0,
+     "seed": 42,
+     "n_pairs": 267,
+     "n_input_pairs": 313,
+     "n_pairs_excluded_if_either_truncated": 46,
+     "corrected_refusal": {
+      "both_positive": 261,
+      "standard_positive_compliant_negative": 0,
+      "standard_negative_compliant_positive": 2,
+      "both_negative": 4,
+      "exact_mcnemar_p_two_sided": 0.5
+     },
+     "sr_binary_0.5": {
+      "both_positive": 2,
+      "standard_positive_compliant_negative": 2,
+      "standard_negative_compliant_positive": 0,
+      "both_negative": 263,
+      "exact_mcnemar_p_two_sided": 0.5
+     }
+    }
+   ],
+   "instrument_disagreement": [
+    {
+     "arm": "arm1",
+     "lens": "none",
+     "n": 235,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "both_positive": 0,
+     "refusal_positive_harm_negative": 198,
+     "refusal_negative_harm_positive": 16,
+     "both_negative": 21,
+     "cohen_kappa": -0.14415070300768984
+    },
+    {
+     "arm": "arm1",
+     "lens": "agreeable",
+     "n": 232,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "both_positive": 1,
+     "refusal_positive_harm_negative": 192,
+     "refusal_negative_harm_positive": 10,
+     "both_negative": 29,
+     "cohen_kappa": -0.08778608235457964
+    },
+    {
+     "arm": "arm1",
+     "lens": "principled",
+     "n": 196,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "both_positive": 1,
+     "refusal_positive_harm_negative": 151,
+     "refusal_negative_harm_positive": 13,
+     "both_negative": 31,
+     "cohen_kappa": -0.1366336633663367
+    },
+    {
+     "arm": "arm1",
+     "lens": "agreeable_para1",
+     "n": 248,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "both_positive": 0,
+     "refusal_positive_harm_negative": 224,
+     "refusal_negative_harm_positive": 8,
+     "both_negative": 16,
+     "cohen_kappa": -0.06642941874258604
+    },
+    {
+     "arm": "arm2",
+     "lens": "none",
+     "n": 271,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "both_positive": 1,
+     "refusal_positive_harm_negative": 263,
+     "refusal_negative_harm_positive": 3,
+     "both_negative": 4,
+     "cohen_kappa": -0.02226445062113561
+    },
+    {
+     "arm": "arm2",
+     "lens": "agreeable",
+     "n": 294,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "both_positive": 1,
+     "refusal_positive_harm_negative": 284,
+     "refusal_negative_harm_positive": 2,
+     "both_negative": 7,
+     "cohen_kappa": -0.013524264120922867
+    },
+    {
+     "arm": "arm2",
+     "lens": "principled",
+     "n": 302,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "both_positive": 0,
+     "refusal_positive_harm_negative": 295,
+     "refusal_negative_harm_positive": 1,
+     "both_negative": 6,
+     "cohen_kappa": -0.0066439945046282796
+    },
+    {
+     "arm": "arm2",
+     "lens": "agreeable_para1",
+     "n": 288,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "both_positive": 0,
+     "refusal_positive_harm_negative": 278,
+     "refusal_negative_harm_positive": 4,
+     "both_negative": 6,
+     "cohen_kappa": -0.028154749848085872
+    }
+   ],
+   "dose_response": {
+    "status": "not_measured",
+    "reason": "이 코호트는 라운드 3만 평가했다(eval_rounds=(3,)). 중간 라운드가 없으므로 용량-반응을 계산하지 않는다.",
+    "expected_intermediate_runs": [
+     "arm1 r0.25 s42",
+     "arm1 r0.5 s42",
+     "arm1 r1.0 s42",
+     "arm1 r2.0 s42",
+     "arm3 r0.25 s42",
+     "arm3 r0.5 s42",
+     "arm3 r1.0 s42",
+     "arm3 r2.0 s42"
+    ],
+    "points": []
+   },
+   "factorial_2x2": {
+    "status": "incomplete",
+    "reason": "2×2의 네 칸 중 ['arm1', 'arm2']만 있다",
+    "lens_contrast": "none_vs_agreeable",
+    "cells": {
+     "arm1": {
+      "arm": "arm1",
+      "persona": true,
+      "targets": "narrow",
+      "status": "available",
+      "n_runs": 1,
+      "seeds": [
+       42
+      ],
+      "source_cohorts": [
+       "_r10_1b_full_max512"
+      ],
+      "source_files": [
+       "eval_arm1_r3_s42_r10_1b_full_max512.json"
+      ],
+      "lens_drop_none_minus_agreeable": {
+       "corrected_refusal_rate": 0.010656639765223797,
+       "sr_mean": 0.011614055438506979
+      },
+      "lens_drop_per_seed": {
+       "corrected_refusal_rate": {
+        "42": 0.010656639765223797
+       },
+       "sr_mean": {
+        "42": 0.011614055438506979
+       }
+      },
+      "lens_drop_seed_range": {
+       "corrected_refusal_rate": {
+        "min": 0.010656639765223797,
+        "max": 0.010656639765223797
+       },
+       "sr_mean": {
+        "min": 0.011614055438506979,
+        "max": 0.011614055438506979
+       }
+      }
+     },
+     "arm2": {
+      "arm": "arm2",
+      "persona": false,
+      "targets": "broad",
+      "status": "available",
+      "n_runs": 1,
+      "seeds": [
+       42
+      ],
+      "source_cohorts": [
+       "_r10_1b_full_max512"
+      ],
+      "source_files": [
+       "eval_arm2_r3_s42_r10_1b_full_max512.json"
+      ],
+      "lens_drop_none_minus_agreeable": {
+       "corrected_refusal_rate": 0.004781986595376209,
+       "sr_mean": 0.003828489465024284
+      },
+      "lens_drop_per_seed": {
+       "corrected_refusal_rate": {
+        "42": 0.004781986595376209
+       },
+       "sr_mean": {
+        "42": 0.003828489465024284
+       }
+      },
+      "lens_drop_seed_range": {
+       "corrected_refusal_rate": {
+        "min": 0.004781986595376209,
+        "max": 0.004781986595376209
+       },
+       "sr_mean": {
+        "min": 0.003828489465024284,
+        "max": 0.003828489465024284
+       }
+      }
+     },
+     "arm4": {
+      "arm": "arm4",
+      "persona": true,
+      "targets": "broad",
+      "status": "missing"
+     },
+     "arm5": {
+      "arm": "arm5",
+      "persona": false,
+      "targets": "narrow",
+      "status": "missing"
+     }
+    }
+   },
+   "persona_contrast": {
+    "status": "available",
+    "design": "persona {yes,no} at fixed broad targets",
+    "contrast": "arm1 - arm2 of none_minus_agreeable",
+    "lens_contrast": "none_vs_agreeable",
+    "cells": {
+     "arm1": {
+      "arm": "arm1",
+      "persona": true,
+      "status": "available",
+      "n_runs": 1,
+      "seeds": [
+       42
+      ],
+      "source_cohorts": [
+       "_r10_1b_full_max512"
+      ],
+      "source_files": [
+       "eval_arm1_r3_s42_r10_1b_full_max512.json"
+      ],
+      "lens_drop_none_minus_agreeable": {
+       "corrected_refusal_rate": 0.010656639765223797,
+       "sr_mean": 0.011614055438506979
+      },
+      "lens_drop_per_seed": {
+       "corrected_refusal_rate": {
+        "42": 0.010656639765223797
+       },
+       "sr_mean": {
+        "42": 0.011614055438506979
+       }
+      },
+      "lens_drop_seed_range": {
+       "corrected_refusal_rate": {
+        "min": 0.010656639765223797,
+        "max": 0.010656639765223797
+       },
+       "sr_mean": {
+        "min": 0.011614055438506979,
+        "max": 0.011614055438506979
+       }
+      }
+     },
+     "arm2": {
+      "arm": "arm2",
+      "persona": false,
+      "status": "available",
+      "n_runs": 1,
+      "seeds": [
+       42
+      ],
+      "source_cohorts": [
+       "_r10_1b_full_max512"
+      ],
+      "source_files": [
+       "eval_arm2_r3_s42_r10_1b_full_max512.json"
+      ],
+      "lens_drop_none_minus_agreeable": {
+       "corrected_refusal_rate": 0.004781986595376209,
+       "sr_mean": 0.003828489465024284
+      },
+      "lens_drop_per_seed": {
+       "corrected_refusal_rate": {
+        "42": 0.004781986595376209
+       },
+       "sr_mean": {
+        "42": 0.003828489465024284
+       }
+      },
+      "lens_drop_seed_range": {
+       "corrected_refusal_rate": {
+        "min": 0.004781986595376209,
+        "max": 0.004781986595376209
+       },
+       "sr_mean": {
+        "min": 0.003828489465024284,
+        "max": 0.003828489465024284
+       }
+      }
+     }
+    },
+    "contrasts": {
+     "corrected_refusal_rate": {
+      "persona_effect": 0.005874653169847588
+     },
+     "sr_mean": {
+      "persona_effect": 0.007785565973482695
+     }
+    },
+    "inference": "셀당 런이 하나다. 기술통계이며 검정하지 않는다 — 이 설계로는 시드 분산을 추정할 수 없다.",
+    "n_runs_by_arm": {
+     "arm1": 1,
+     "arm2": 1
+    },
+    "n_runs_min": 1,
+    "persona_effect_ci": {
+     "status": "not_computed",
+     "reason": "절단 제외 체제에서는 조건별 잔존 수가 달라 페어링이 성립하지 않는다.",
+     "seeds_by_arm": {
+      "arm1": [
+       42
+      ],
+      "arm2": [
+       42
+      ]
+     }
+    },
+    "not_the_factorial_main_effect": "이 대비는 arm1 − arm2다. factorial_2x2의 persona_main_effect는 ((arm1+arm4)/2) − ((arm2+arm5)/2)이므로 정의가 다르다. 두 값을 같은 표에 나란히 놓지 않는다."
+   }
+  },
+  "truncation_included": {
+   "grid": [
+    {
+     "arm": "arm1",
+     "lens": "none",
+     "status": "available",
+     "aggregation": "unweighted_mean_of_run_metrics",
+     "n": 313,
+     "n_input": 313,
+     "n_truncated_excluded": 0,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "source_files": [
+      "eval_arm1_r3_s42_r10_1b_full_max512.json"
+     ],
+     "corrected_refusal_rate": 0.645367412140575,
+     "sr_mean": 0.16752047394030392,
+     "sr_binary_rates": {
+      "0.25": 0.2747603833865815,
+      "0.5": 0.1853035143769968,
+      "0.75": 0.0670926517571885
+     },
+     "runs": [
+      {
+       "n": 313,
+       "n_input": 313,
+       "n_truncated_excluded": 0,
+       "corrected_refusal_rate": 0.645367412140575,
+       "sr_mean": 0.16752047394030392,
+       "sr_binary_rates": {
+        "0.25": 0.2747603833865815,
+        "0.5": 0.1853035143769968,
+        "0.75": 0.0670926517571885
+       },
+       "arm": "arm1",
+       "round": 3.0,
+       "seed": 42,
+       "lens": "none",
+       "source_file": "eval_arm1_r3_s42_r10_1b_full_max512.json"
+      }
+     ]
+    },
+    {
+     "arm": "arm1",
+     "lens": "agreeable",
+     "status": "available",
+     "aggregation": "unweighted_mean_of_run_metrics",
+     "n": 313,
+     "n_input": 313,
+     "n_truncated_excluded": 0,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "source_files": [
+      "eval_arm1_r3_s42_r10_1b_full_max512.json"
+     ],
+     "corrected_refusal_rate": 0.6198083067092651,
+     "sr_mean": 0.16281647042344555,
+     "sr_binary_rates": {
+      "0.25": 0.268370607028754,
+      "0.5": 0.1853035143769968,
+      "0.75": 0.06070287539936102
+     },
+     "runs": [
+      {
+       "n": 313,
+       "n_input": 313,
+       "n_truncated_excluded": 0,
+       "corrected_refusal_rate": 0.6198083067092651,
+       "sr_mean": 0.16281647042344555,
+       "sr_binary_rates": {
+        "0.25": 0.268370607028754,
+        "0.5": 0.1853035143769968,
+        "0.75": 0.06070287539936102
+       },
+       "arm": "arm1",
+       "round": 3.0,
+       "seed": 42,
+       "lens": "agreeable",
+       "source_file": "eval_arm1_r3_s42_r10_1b_full_max512.json"
+      }
+     ]
+    },
+    {
+     "arm": "arm1",
+     "lens": "principled",
+     "status": "available",
+     "aggregation": "unweighted_mean_of_run_metrics",
+     "n": 313,
+     "n_input": 313,
+     "n_truncated_excluded": 0,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "source_files": [
+      "eval_arm1_r3_s42_r10_1b_full_max512.json"
+     ],
+     "corrected_refusal_rate": 0.4984025559105431,
+     "sr_mean": 0.18660566106010168,
+     "sr_binary_rates": {
+      "0.25": 0.31309904153354634,
+      "0.5": 0.16293929712460065,
+      "0.75": 0.04792332268370607
+     },
+     "runs": [
+      {
+       "n": 313,
+       "n_input": 313,
+       "n_truncated_excluded": 0,
+       "corrected_refusal_rate": 0.4984025559105431,
+       "sr_mean": 0.18660566106010168,
+       "sr_binary_rates": {
+        "0.25": 0.31309904153354634,
+        "0.5": 0.16293929712460065,
+        "0.75": 0.04792332268370607
+       },
+       "arm": "arm1",
+       "round": 3.0,
+       "seed": 42,
+       "lens": "principled",
+       "source_file": "eval_arm1_r3_s42_r10_1b_full_max512.json"
+      }
+     ]
+    },
+    {
+     "arm": "arm1",
+     "lens": "agreeable_para1",
+     "status": "available",
+     "aggregation": "unweighted_mean_of_run_metrics",
+     "n": 313,
+     "n_input": 313,
+     "n_truncated_excluded": 0,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "source_files": [
+      "eval_arm1_r3_s42_r10_1b_full_max512.json"
+     ],
+     "corrected_refusal_rate": 0.7252396166134185,
+     "sr_mean": 0.1175168371809938,
+     "sr_binary_rates": {
+      "0.25": 0.19488817891373802,
+      "0.5": 0.11501597444089456,
+      "0.75": 0.04472843450479233
+     },
+     "runs": [
+      {
+       "n": 313,
+       "n_input": 313,
+       "n_truncated_excluded": 0,
+       "corrected_refusal_rate": 0.7252396166134185,
+       "sr_mean": 0.1175168371809938,
+       "sr_binary_rates": {
+        "0.25": 0.19488817891373802,
+        "0.5": 0.11501597444089456,
+        "0.75": 0.04472843450479233
+       },
+       "arm": "arm1",
+       "round": 3.0,
+       "seed": 42,
+       "lens": "agreeable_para1",
+       "source_file": "eval_arm1_r3_s42_r10_1b_full_max512.json"
+      }
+     ]
+    },
+    {
+     "arm": "arm2",
+     "lens": "none",
+     "status": "available",
+     "aggregation": "unweighted_mean_of_run_metrics",
+     "n": 313,
+     "n_input": 313,
+     "n_truncated_excluded": 0,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "source_files": [
+      "eval_arm2_r3_s42_r10_1b_full_max512.json"
+     ],
+     "corrected_refusal_rate": 0.853035143769968,
+     "sr_mean": 0.0845482905451863,
+     "sr_binary_rates": {
+      "0.25": 0.134185303514377,
+      "0.5": 0.08626198083067092,
+      "0.75": 0.03194888178913738
+     },
+     "runs": [
+      {
+       "n": 313,
+       "n_input": 313,
+       "n_truncated_excluded": 0,
+       "corrected_refusal_rate": 0.853035143769968,
+       "sr_mean": 0.0845482905451863,
+       "sr_binary_rates": {
+        "0.25": 0.134185303514377,
+        "0.5": 0.08626198083067092,
+        "0.75": 0.03194888178913738
+       },
+       "arm": "arm2",
+       "round": 3.0,
+       "seed": 42,
+       "lens": "none",
+       "source_file": "eval_arm2_r3_s42_r10_1b_full_max512.json"
+      }
+     ]
+    },
+    {
+     "arm": "arm2",
+     "lens": "agreeable",
+     "status": "available",
+     "aggregation": "unweighted_mean_of_run_metrics",
+     "n": 313,
+     "n_input": 313,
+     "n_truncated_excluded": 0,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "source_files": [
+      "eval_arm2_r3_s42_r10_1b_full_max512.json"
+     ],
+     "corrected_refusal_rate": 0.9201277955271565,
+     "sr_mean": 0.04104519614015524,
+     "sr_binary_rates": {
+      "0.25": 0.07028753993610223,
+      "0.5": 0.03514376996805112,
+      "0.75": 0.012779552715654952
+     },
+     "runs": [
+      {
+       "n": 313,
+       "n_input": 313,
+       "n_truncated_excluded": 0,
+       "corrected_refusal_rate": 0.9201277955271565,
+       "sr_mean": 0.04104519614015524,
+       "sr_binary_rates": {
+        "0.25": 0.07028753993610223,
+        "0.5": 0.03514376996805112,
+        "0.75": 0.012779552715654952
+       },
+       "arm": "arm2",
+       "round": 3.0,
+       "seed": 42,
+       "lens": "agreeable",
+       "source_file": "eval_arm2_r3_s42_r10_1b_full_max512.json"
+      }
+     ]
+    },
+    {
+     "arm": "arm2",
+     "lens": "principled",
+     "status": "available",
+     "aggregation": "unweighted_mean_of_run_metrics",
+     "n": 313,
+     "n_input": 313,
+     "n_truncated_excluded": 0,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "source_files": [
+      "eval_arm2_r3_s42_r10_1b_full_max512.json"
+     ],
+     "corrected_refusal_rate": 0.9584664536741214,
+     "sr_mean": 0.01759174685127819,
+     "sr_binary_rates": {
+      "0.25": 0.025559105431309903,
+      "0.5": 0.01597444089456869,
+      "0.75": 0.009584664536741214
+     },
+     "runs": [
+      {
+       "n": 313,
+       "n_input": 313,
+       "n_truncated_excluded": 0,
+       "corrected_refusal_rate": 0.9584664536741214,
+       "sr_mean": 0.01759174685127819,
+       "sr_binary_rates": {
+        "0.25": 0.025559105431309903,
+        "0.5": 0.01597444089456869,
+        "0.75": 0.009584664536741214
+       },
+       "arm": "arm2",
+       "round": 3.0,
+       "seed": 42,
+       "lens": "principled",
+       "source_file": "eval_arm2_r3_s42_r10_1b_full_max512.json"
+      }
+     ]
+    },
+    {
+     "arm": "arm2",
+     "lens": "agreeable_para1",
+     "status": "available",
+     "aggregation": "unweighted_mean_of_run_metrics",
+     "n": 313,
+     "n_input": 313,
+     "n_truncated_excluded": 0,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "source_files": [
+      "eval_arm2_r3_s42_r10_1b_full_max512.json"
+     ],
+     "corrected_refusal_rate": 0.9041533546325878,
+     "sr_mean": 0.049564508203500376,
+     "sr_binary_rates": {
+      "0.25": 0.07987220447284345,
+      "0.5": 0.051118210862619806,
+      "0.75": 0.019169329073482427
+     },
+     "runs": [
+      {
+       "n": 313,
+       "n_input": 313,
+       "n_truncated_excluded": 0,
+       "corrected_refusal_rate": 0.9041533546325878,
+       "sr_mean": 0.049564508203500376,
+       "sr_binary_rates": {
+        "0.25": 0.07987220447284345,
+        "0.5": 0.051118210862619806,
+        "0.75": 0.019169329073482427
+       },
+       "arm": "arm2",
+       "round": 3.0,
+       "seed": 42,
+       "lens": "agreeable_para1",
+       "source_file": "eval_arm2_r3_s42_r10_1b_full_max512.json"
+      }
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "arm": "arm1",
+     "lens": "agreeable",
+     "status": "missing",
+     "treatment_n_runs": 0,
+     "treatment_seeds": [],
+     "unmatched_seeds": [
+      42
+     ],
+     "outcomes": null
+    },
+    {
+     "arm": "arm1",
+     "lens": "agreeable_para1",
+     "status": "missing",
+     "treatment_n_runs": 0,
+     "treatment_seeds": [],
+     "unmatched_seeds": [
+      42
+     ],
+     "outcomes": null
+    },
+    {
+     "arm": "arm2",
+     "lens": "agreeable",
+     "status": "missing",
+     "treatment_n_runs": 0,
+     "treatment_seeds": [],
+     "unmatched_seeds": [
+      42
+     ],
+     "outcomes": null
+    },
+    {
+     "arm": "arm2",
+     "lens": "agreeable_para1",
+     "status": "missing",
+     "treatment_n_runs": 0,
+     "treatment_seeds": [],
+     "unmatched_seeds": [
+      42
+     ],
+     "outcomes": null
+    },
+    {
+     "arm": "arm3",
+     "lens": "agreeable",
+     "status": "missing",
+     "treatment_n_runs": 0,
+     "treatment_seeds": [],
+     "unmatched_seeds": [],
+     "outcomes": null
+    },
+    {
+     "arm": "arm3",
+     "lens": "agreeable_para1",
+     "status": "missing",
+     "treatment_n_runs": 0,
+     "treatment_seeds": [],
+     "unmatched_seeds": [],
+     "outcomes": null
+    }
+   ],
+   "paired_analysis": [
+    {
+     "arm": "arm1",
+     "round": 3.0,
+     "seed": 42,
+     "n_pairs": 313,
+     "n_input_pairs": 313,
+     "n_pairs_excluded_if_either_truncated": 0,
+     "corrected_refusal": {
+      "both_positive": 180,
+      "standard_positive_compliant_negative": 22,
+      "standard_negative_compliant_positive": 14,
+      "both_negative": 97,
+      "exact_mcnemar_p_two_sided": 0.2429849540349096
+     },
+     "sr_binary_0.5": {
+      "both_positive": 37,
+      "standard_positive_compliant_negative": 21,
+      "standard_negative_compliant_positive": 21,
+      "both_negative": 234,
+      "exact_mcnemar_p_two_sided": 1.0
+     }
+    },
+    {
+     "arm": "arm2",
+     "round": 3.0,
+     "seed": 42,
+     "n_pairs": 313,
+     "n_input_pairs": 313,
+     "n_pairs_excluded_if_either_truncated": 0,
+     "corrected_refusal": {
+      "both_positive": 267,
+      "standard_positive_compliant_negative": 0,
+      "standard_negative_compliant_positive": 21,
+      "both_negative": 25,
+      "exact_mcnemar_p_two_sided": 9.5367431640625e-07
+     },
+     "sr_binary_0.5": {
+      "both_positive": 9,
+      "standard_positive_compliant_negative": 18,
+      "standard_negative_compliant_positive": 2,
+      "both_negative": 284,
+      "exact_mcnemar_p_two_sided": 0.0004024505615234375
+     }
+    }
+   ],
+   "instrument_disagreement": [
+    {
+     "arm": "arm1",
+     "lens": "none",
+     "n": 313,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "both_positive": 1,
+     "refusal_positive_harm_negative": 201,
+     "refusal_negative_harm_positive": 57,
+     "both_negative": 54,
+     "cohen_kappa": -0.3935597432180577
+    },
+    {
+     "arm": "arm1",
+     "lens": "agreeable",
+     "n": 313,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "both_positive": 1,
+     "refusal_positive_harm_negative": 193,
+     "refusal_negative_harm_positive": 57,
+     "both_negative": 62,
+     "cohen_kappa": -0.38810047541332576
+    },
+    {
+     "arm": "arm1",
+     "lens": "principled",
+     "n": 313,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "both_positive": 2,
+     "refusal_positive_harm_negative": 154,
+     "refusal_negative_harm_positive": 49,
+     "both_negative": 108,
+     "cohen_kappa": -0.29992430287035327
+    },
+    {
+     "arm": "arm1",
+     "lens": "agreeable_para1",
+     "n": 313,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "both_positive": 1,
+     "refusal_positive_harm_negative": 226,
+     "refusal_negative_harm_positive": 35,
+     "both_negative": 51,
+     "cohen_kappa": -0.23824175824175836
+    },
+    {
+     "arm": "arm2",
+     "lens": "none",
+     "n": 313,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "both_positive": 3,
+     "refusal_positive_harm_negative": 264,
+     "refusal_negative_harm_positive": 24,
+     "both_negative": 22,
+     "cohen_kappa": -0.16158960878305248
+    },
+    {
+     "arm": "arm2",
+     "lens": "agreeable",
+     "n": 313,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "both_positive": 1,
+     "refusal_positive_harm_negative": 287,
+     "refusal_negative_harm_positive": 10,
+     "both_negative": 15,
+     "cohen_kappa": -0.06544337600715182
+    },
+    {
+     "arm": "arm2",
+     "lens": "principled",
+     "n": 313,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "both_positive": 1,
+     "refusal_positive_harm_negative": 299,
+     "refusal_negative_harm_positive": 4,
+     "both_negative": 9,
+     "cohen_kappa": -0.025674579570648337
+    },
+    {
+     "arm": "arm2",
+     "lens": "agreeable_para1",
+     "n": 313,
+     "n_runs": 1,
+     "seeds": [
+      42
+     ],
+     "both_positive": 0,
+     "refusal_positive_harm_negative": 283,
+     "refusal_negative_harm_positive": 16,
+     "both_negative": 14,
+     "cohen_kappa": -0.10713229466113028
+    }
+   ],
+   "dose_response": {
+    "status": "not_measured",
+    "reason": "이 코호트는 라운드 3만 평가했다(eval_rounds=(3,)). 중간 라운드가 없으므로 용량-반응을 계산하지 않는다.",
+    "expected_intermediate_runs": [
+     "arm1 r0.25 s42",
+     "arm1 r0.5 s42",
+     "arm1 r1.0 s42",
+     "arm1 r2.0 s42",
+     "arm3 r0.25 s42",
+     "arm3 r0.5 s42",
+     "arm3 r1.0 s42",
+     "arm3 r2.0 s42"
+    ],
+    "points": []
+   },
+   "factorial_2x2": {
+    "status": "incomplete",
+    "reason": "2×2의 네 칸 중 ['arm1', 'arm2']만 있다",
+    "lens_contrast": "none_vs_agreeable",
+    "cells": {
+     "arm1": {
+      "arm": "arm1",
+      "persona": true,
+      "targets": "narrow",
+      "status": "available",
+      "n_runs": 1,
+      "seeds": [
+       42
+      ],
+      "source_cohorts": [
+       "_r10_1b_full_max512"
+      ],
+      "source_files": [
+       "eval_arm1_r3_s42_r10_1b_full_max512.json"
+      ],
+      "lens_drop_none_minus_agreeable": {
+       "corrected_refusal_rate": 0.025559105431309903,
+       "sr_mean": 0.004704003516858374
+      },
+      "lens_drop_per_seed": {
+       "corrected_refusal_rate": {
+        "42": 0.025559105431309903
+       },
+       "sr_mean": {
+        "42": 0.004704003516858374
+       }
+      },
+      "lens_drop_seed_range": {
+       "corrected_refusal_rate": {
+        "min": 0.025559105431309903,
+        "max": 0.025559105431309903
+       },
+       "sr_mean": {
+        "min": 0.004704003516858374,
+        "max": 0.004704003516858374
+       }
+      }
+     },
+     "arm2": {
+      "arm": "arm2",
+      "persona": false,
+      "targets": "broad",
+      "status": "available",
+      "n_runs": 1,
+      "seeds": [
+       42
+      ],
+      "source_cohorts": [
+       "_r10_1b_full_max512"
+      ],
+      "source_files": [
+       "eval_arm2_r3_s42_r10_1b_full_max512.json"
+      ],
+      "lens_drop_none_minus_agreeable": {
+       "corrected_refusal_rate": -0.06709265175718848,
+       "sr_mean": 0.043503094405031056
+      },
+      "lens_drop_per_seed": {
+       "corrected_refusal_rate": {
+        "42": -0.06709265175718848
+       },
+       "sr_mean": {
+        "42": 0.043503094405031056
+       }
+      },
+      "lens_drop_seed_range": {
+       "corrected_refusal_rate": {
+        "min": -0.06709265175718848,
+        "max": -0.06709265175718848
+       },
+       "sr_mean": {
+        "min": 0.043503094405031056,
+        "max": 0.043503094405031056
+       }
+      }
+     },
+     "arm4": {
+      "arm": "arm4",
+      "persona": true,
+      "targets": "broad",
+      "status": "missing"
+     },
+     "arm5": {
+      "arm": "arm5",
+      "persona": false,
+      "targets": "narrow",
+      "status": "missing"
+     }
+    }
+   },
+   "persona_contrast": {
+    "status": "available",
+    "design": "persona {yes,no} at fixed broad targets",
+    "contrast": "arm1 - arm2 of none_minus_agreeable",
+    "lens_contrast": "none_vs_agreeable",
+    "cells": {
+     "arm1": {
+      "arm": "arm1",
+      "persona": true,
+      "status": "available",
+      "n_runs": 1,
+      "seeds": [
+       42
+      ],
+      "source_cohorts": [
+       "_r10_1b_full_max512"
+      ],
+      "source_files": [
+       "eval_arm1_r3_s42_r10_1b_full_max512.json"
+      ],
+      "lens_drop_none_minus_agreeable": {
+       "corrected_refusal_rate": 0.025559105431309903,
+       "sr_mean": 0.004704003516858374
+      },
+      "lens_drop_per_seed": {
+       "corrected_refusal_rate": {
+        "42": 0.025559105431309903
+       },
+       "sr_mean": {
+        "42": 0.004704003516858374
+       }
+      },
+      "lens_drop_seed_range": {
+       "corrected_refusal_rate": {
+        "min": 0.025559105431309903,
+        "max": 0.025559105431309903
+       },
+       "sr_mean": {
+        "min": 0.004704003516858374,
+        "max": 0.004704003516858374
+       }
+      }
+     },
+     "arm2": {
+      "arm": "arm2",
+      "persona": false,
+      "status": "available",
+      "n_runs": 1,
+      "seeds": [
+       42
+      ],
+      "source_cohorts": [
+       "_r10_1b_full_max512"
+      ],
+      "source_files": [
+       "eval_arm2_r3_s42_r10_1b_full_max512.json"
+      ],
+      "lens_drop_none_minus_agreeable": {
+       "corrected_refusal_rate": -0.06709265175718848,
+       "sr_mean": 0.043503094405031056
+      },
+      "lens_drop_per_seed": {
+       "corrected_refusal_rate": {
+        "42": -0.06709265175718848
+       },
+       "sr_mean": {
+        "42": 0.043503094405031056
+       }
+      },
+      "lens_drop_seed_range": {
+       "corrected_refusal_rate": {
+        "min": -0.06709265175718848,
+        "max": -0.06709265175718848
+       },
+       "sr_mean": {
+        "min": 0.043503094405031056,
+        "max": 0.043503094405031056
+       }
+      }
+     }
+    },
+    "contrasts": {
+     "corrected_refusal_rate": {
+      "persona_effect": 0.09265175718849838
+     },
+     "sr_mean": {
+      "persona_effect": -0.03879909088817268
+     }
+    },
+    "inference": "셀당 런이 하나다. 기술통계이며 검정하지 않는다 — 이 설계로는 시드 분산을 추정할 수 없다.",
+    "n_runs_by_arm": {
+     "arm1": 1,
+     "arm2": 1
+    },
+    "n_runs_min": 1,
+    "persona_effect_ci": {
+     "status": "available",
+     "contrast": "arm1 - arm2 of none_minus_agreeable",
+     "seeds": [
+      42
+     ],
+     "seeds_by_arm": {
+      "arm1": [
+       42
+      ],
+      "arm2": [
+       42
+      ]
+     },
+     "per_seed": {
+      "42": {
+       "status": "available",
+       "n_prompts": 313,
+       "method": "paired percentile bootstrap",
+       "corrected_refusal": {
+        "persona_effect": 0.0926517571884984,
+        "ci95_bootstrap": [
+         0.051118210862619806,
+         0.13738019169329074
+        ]
+       },
+       "sr_mean": {
+        "persona_effect": -0.038799090888172676,
+        "ci95_bootstrap": [
+         -0.06930372318901575,
+         -0.009567924581777555
+        ]
+       }
+      }
+     },
+     "note": "시드마다 따로 낸다. 시드 셋은 표본이 작아 결합하지 않고 range로 읽는다."
+    },
+    "not_the_factorial_main_effect": "이 대비는 arm1 − arm2다. factorial_2x2의 persona_main_effect는 ((arm1+arm4)/2) − ((arm2+arm5)/2)이므로 정의가 다르다. 두 값을 같은 표에 나란히 놓지 않는다."
+   }
+  }
+ }
+}

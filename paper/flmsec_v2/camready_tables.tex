@@ -1,0 +1,59 @@
+\begin{table}[htb]
+  \centering
+  \footnotesize
+  \caption{Learned-judge interactions $I_a^U$ on the unsafe rate, headline grid, mean of three seeds with $95\%$ paired-prompt bootstrap intervals. Negative means the lens raises the unsafe rate more than in arm 0.}
+  \label{tab:judges}
+  \begin{tabular}{@{}llcc@{}}
+    \toprule
+    Judge & Arm & Compliant lens & Held-out paraphrase \\
+    \midrule
+    Llama Guard 3 & 1 & $-0.159$ $[-0.199, -0.120]$ & $-0.401$ $[-0.455, -0.348]$ \\
+     & 2 & $0.011$ $[-0.007, 0.029]$ & $0.016$ $[-0.007, 0.040]$ \\
+     & 3 & $-0.164$ $[-0.201, -0.129]$ & $-0.224$ $[-0.267, -0.181]$ \\
+    \addlinespace
+    HarmBench classifier & 1 & $-0.141$ $[-0.179, -0.104]$ & $-0.342$ $[-0.392, -0.292]$ \\
+     & 2 & $0.005$ $[-0.012, 0.022]$ & $0.014$ $[-0.011, 0.038]$ \\
+     & 3 & $-0.101$ $[-0.134, -0.070]$ & $-0.151$ $[-0.193, -0.112]$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[htb]
+  \centering
+  \footnotesize
+  \caption{Learned-judge errors against the human labels of Appendix~\ref{app:validation} (earlier seed-42 generation). Arms 0 and 2 contain one human-harmful record each.}
+  \label{tab:judge-human}
+  \begin{tabular}{@{}lcccc@{}}
+    \toprule
+    & \multicolumn{2}{c}{Llama Guard 3} & \multicolumn{2}{c}{HarmBench classifier} \\
+    \cmidrule(lr){2-3}\cmidrule(l){4-5}
+    Arm & unsafe $\mid$ human refusal & safe $\mid$ human harmful & unsafe $\mid$ human refusal & safe $\mid$ human harmful \\
+    \midrule
+    0 & $0/98$ & $0/1$ & $0/98$ & $0/1$ \\
+    1 & $0/87$ & $5/29$ & $0/87$ & $2/29$ \\
+    2 & $1/98$ & $0/1$ & $1/98$ & $0/1$ \\
+    3 & $0/86$ & $6/20$ & $0/86$ & $8/20$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[htb]
+  \centering
+  \footnotesize
+  \caption{Refusal contrasts for the 512-token Qwen rerun and the style-swap, seed 42, $95\%$ paired-prompt bootstrap intervals.}
+  \label{tab:qwen-swap}
+  \begin{tabular}{@{}llcc@{}}
+    \toprule
+    Check & Contrast & Compliant lens & Held-out paraphrase \\
+    \midrule
+    Qwen, 512 tokens & $I_1^R-I_2^R$ & $0.099$ $[0.051, 0.147]$ & $0.086$ $[0.042, 0.134]$ \\
+     & $I_3^R-I_2^R$ & $0.099$ $[0.051, 0.150]$ & $0.080$ $[0.035, 0.125]$ \\
+     & $I_1^R$ & $-0.246$ $[-0.313, -0.179]$ & $-0.042$ $[-0.102, 0.019]$ \\
+     & $I_2^R$ & $-0.345$ $[-0.409, -0.281]$ & $-0.128$ $[-0.188, -0.067]$ \\
+     & $I_3^R$ & $-0.246$ $[-0.316, -0.176]$ & $-0.048$ $[-0.105, 0.010]$ \\
+    \addlinespace
+    Style-swap & $I_8^R$ (arm 1 content, neutral) & $0.099$ $[0.054, 0.144]$ & $0.380$ $[0.319, 0.444]$ \\
+     & $I_9^R$ (arm 2 content, warm) & $0.144$ $[0.096, 0.192]$ & $0.147$ $[0.096, 0.198]$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}

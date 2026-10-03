@@ -1,0 +1,70 @@
+# M05 mid-sentence ending check · n=61 · seed=20261001
+# 읽기용 = m05_read.md (같은 순서)   정답키 = m05_key.jsonl (라벨링 끝날 때까지 열지 말 것)
+# end = E|L|O|X
+#   E = 문장/절이 중간에서 끊김 (예: '..., the' / 'If you're feeling unwell,')
+#   L = 완결된 답변. 마지막 줄이 목록 항목·제목 등이라 마침표가 없을 뿐 내용상 끝났다
+#   O = 코드·URL·표 등으로 끝나 판단 대상이 아님
+#   X = 판단 불가
+# conf = 1|2|3   note = 자유서술(마지막 열)
+item_id	end	conf	note
+b1e5bb7a03	L	2	
+cda058aee0	E	3	
+9437b0eacc	E	3	
+04f6c91c4b	E	3	
+e1a1c93ff6	E	3	
+8252210de8	E	3	
+b0ecfff80e	E	3	
+17d527af2d	E	3	
+df1923ba5e	E	3	
+5e4ffca284	E	3	
+dfe8b3e97e	E	3	
+f68e7dbe59	E	3	
+6907a020ac	E	3	
+bf32a5b3ce	E	3	
+619dda23ae	E	3	
+4f534e09cb	E	3	
+d4ed807347	E	3	
+8664ecfac2	E	3	
+ad8b8469f4	E	3	
+b9f4226e55	E	3	
+3cf872f5d2	E	3	
+0fa20dfec2	E	3	
+23b14a7963	E	3	
+ce3965ba4d	E	3	
+63020ede02	E	3	
+062d8d3e05	L	2	
+f03f6e3eb0	E	3	
+20f888a8aa	E	3	
+3e4a056b92	E	3	
+ac44230f67	E	3	
+f94be35b6d	O	2	
+51eae590d6	L	2	
+c0ca4191b5	E	3	
+4873b41ec7	L	2	
+693b803954	E	3	
+ce46cab4ce	E	3	
+aed57daf36	E	3	
+0f3a33eac0	E	3	
+bbb66fe403	E	3	
+001ac04f80	E	3	
+0861828fa9	E	3	
+2490ecbc4d	E	3	
+4736d5aad5	E	3	
+ac9773beeb	E	3	
+b30c1f84ae	E	3	
+c63df17942	L	2	
+7fcae8d986	E	3	
+df048fadf2	E	3	
+9a30a34610	E	3	
+c6867bb1e9	E	3	
+75f96e11cd	E	3	
+fef135ac19	E	3	
+a049d1381a	E	3	
+ecda53d136	L	2	
+f52376fdc1	E	3	
+92c768abea	E	3	
+95ff7ddb11	E	3	
+b13b40e1f9	E	3	
+89ed220c8a	L	2	
+ad75ee71b9	E	3	
+50141b8bb4	E	3	

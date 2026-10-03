@@ -1,0 +1,17 @@
+{
+ "n": 414,
+ "median_length_ratio": 1.4342825728583182,
+ "empty": 0,
+ "refusal_pattern_rate_src": 0.026570048309178744,
+ "refusal_pattern_rate_new": 0.014492753623188406,
+ "gate_pass": true,
+ "src": "arm2",
+ "dst": "arm9",
+ "style": "warm",
+ "base": "unsloth/Meta-Llama-3.1-8B-Instruct",
+ "max_new_tokens": 384,
+ "gate": [
+  0.5,
+  2.0
+ ]
+}

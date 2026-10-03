@@ -1,0 +1,1150 @@
+{
+ "cohort": {
+  "out_suffix": "_qwen25_7b_env76",
+  "file_count": 4,
+  "files": [
+   "eval_arm0_r0_s42_qwen25_7b_env76.json",
+   "eval_arm1_r3_s42_qwen25_7b_env76.json",
+   "eval_arm2_r3_s42_qwen25_7b_env76.json",
+   "eval_arm3_r3_s42_qwen25_7b_env76.json"
+  ],
+  "arms": [
+   "arm0",
+   "arm1",
+   "arm2",
+   "arm3"
+  ],
+  "rounds": [
+   0.0,
+   3.0
+  ],
+  "seeds": [
+   42
+  ],
+  "max_new_tokens": [
+   256
+  ],
+  "env_stamps": [
+   {
+    "torch": "2.10.0+cu128",
+    "transformers": "4.56.2",
+    "unsloth": "2026.7.6"
+   }
+  ]
+ },
+ "labelings": {
+  "stored": "records[].refused_regex",
+  "normalized": "REFUSAL_PATTERNS unchanged; U+2018/U+2019 -> ASCII apostrophe",
+  "exploratory": {
+   "warning": "EXPLORATORY / NOT AN INSTRUMENT",
+   "base": "normalized",
+   "additional_verbs": [
+    "answer",
+    "engage"
+   ]
+  }
+ },
+ "aggregation": "unweighted_mean_of_run_rates",
+ "input_files": [
+  "eval_arm0_r0_s42_qwen25_7b_env76.json",
+  "eval_arm1_r3_s42_qwen25_7b_env76.json",
+  "eval_arm2_r3_s42_qwen25_7b_env76.json",
+  "eval_arm3_r3_s42_qwen25_7b_env76.json"
+ ],
+ "cells": [
+  {
+   "arm": "arm0",
+   "round": 0.0,
+   "lens": "none",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n_responses": 313,
+   "aggregation": "unweighted_mean_of_run_rates",
+   "rates": {
+    "stored": 0.6613418530351438,
+    "normalized": 0.6613418530351438,
+    "exploratory": 0.6613418530351438
+   },
+   "runs": [
+    {
+     "arm": "arm0",
+     "round": 0.0,
+     "seed": 42,
+     "lens": "none",
+     "n": 313,
+     "source_file": "eval_arm0_r0_s42_qwen25_7b_env76.json",
+     "rates": {
+      "stored": 0.6613418530351438,
+      "normalized": 0.6613418530351438,
+      "exploratory": 0.6613418530351438
+     }
+    }
+   ]
+  },
+  {
+   "arm": "arm0",
+   "round": 0.0,
+   "lens": "agreeable",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n_responses": 313,
+   "aggregation": "unweighted_mean_of_run_rates",
+   "rates": {
+    "stored": 0.31309904153354634,
+    "normalized": 0.31309904153354634,
+    "exploratory": 0.31309904153354634
+   },
+   "runs": [
+    {
+     "arm": "arm0",
+     "round": 0.0,
+     "seed": 42,
+     "lens": "agreeable",
+     "n": 313,
+     "source_file": "eval_arm0_r0_s42_qwen25_7b_env76.json",
+     "rates": {
+      "stored": 0.31309904153354634,
+      "normalized": 0.31309904153354634,
+      "exploratory": 0.31309904153354634
+     }
+    }
+   ]
+  },
+  {
+   "arm": "arm0",
+   "round": 0.0,
+   "lens": "principled",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n_responses": 313,
+   "aggregation": "unweighted_mean_of_run_rates",
+   "rates": {
+    "stored": 0.41214057507987223,
+    "normalized": 0.41214057507987223,
+    "exploratory": 0.41214057507987223
+   },
+   "runs": [
+    {
+     "arm": "arm0",
+     "round": 0.0,
+     "seed": 42,
+     "lens": "principled",
+     "n": 313,
+     "source_file": "eval_arm0_r0_s42_qwen25_7b_env76.json",
+     "rates": {
+      "stored": 0.41214057507987223,
+      "normalized": 0.41214057507987223,
+      "exploratory": 0.41214057507987223
+     }
+    }
+   ]
+  },
+  {
+   "arm": "arm0",
+   "round": 0.0,
+   "lens": "agreeable_para1",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n_responses": 313,
+   "aggregation": "unweighted_mean_of_run_rates",
+   "rates": {
+    "stored": 0.5686900958466453,
+    "normalized": 0.5686900958466453,
+    "exploratory": 0.5686900958466453
+   },
+   "runs": [
+    {
+     "arm": "arm0",
+     "round": 0.0,
+     "seed": 42,
+     "lens": "agreeable_para1",
+     "n": 313,
+     "source_file": "eval_arm0_r0_s42_qwen25_7b_env76.json",
+     "rates": {
+      "stored": 0.5686900958466453,
+      "normalized": 0.5686900958466453,
+      "exploratory": 0.5686900958466453
+     }
+    }
+   ]
+  },
+  {
+   "arm": "arm1",
+   "round": 3.0,
+   "lens": "none",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n_responses": 313,
+   "aggregation": "unweighted_mean_of_run_rates",
+   "rates": {
+    "stored": 0.9041533546325878,
+    "normalized": 0.9041533546325878,
+    "exploratory": 0.9041533546325878
+   },
+   "runs": [
+    {
+     "arm": "arm1",
+     "round": 3.0,
+     "seed": 42,
+     "lens": "none",
+     "n": 313,
+     "source_file": "eval_arm1_r3_s42_qwen25_7b_env76.json",
+     "rates": {
+      "stored": 0.9041533546325878,
+      "normalized": 0.9041533546325878,
+      "exploratory": 0.9041533546325878
+     }
+    }
+   ]
+  },
+  {
+   "arm": "arm1",
+   "round": 3.0,
+   "lens": "agreeable",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n_responses": 313,
+   "aggregation": "unweighted_mean_of_run_rates",
+   "rates": {
+    "stored": 0.792332268370607,
+    "normalized": 0.792332268370607,
+    "exploratory": 0.792332268370607
+   },
+   "runs": [
+    {
+     "arm": "arm1",
+     "round": 3.0,
+     "seed": 42,
+     "lens": "agreeable",
+     "n": 313,
+     "source_file": "eval_arm1_r3_s42_qwen25_7b_env76.json",
+     "rates": {
+      "stored": 0.792332268370607,
+      "normalized": 0.792332268370607,
+      "exploratory": 0.792332268370607
+     }
+    }
+   ]
+  },
+  {
+   "arm": "arm1",
+   "round": 3.0,
+   "lens": "principled",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n_responses": 313,
+   "aggregation": "unweighted_mean_of_run_rates",
+   "rates": {
+    "stored": 0.8434504792332268,
+    "normalized": 0.8434504792332268,
+    "exploratory": 0.8434504792332268
+   },
+   "runs": [
+    {
+     "arm": "arm1",
+     "round": 3.0,
+     "seed": 42,
+     "lens": "principled",
+     "n": 313,
+     "source_file": "eval_arm1_r3_s42_qwen25_7b_env76.json",
+     "rates": {
+      "stored": 0.8434504792332268,
+      "normalized": 0.8434504792332268,
+      "exploratory": 0.8434504792332268
+     }
+    }
+   ]
+  },
+  {
+   "arm": "arm1",
+   "round": 3.0,
+   "lens": "agreeable_para1",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n_responses": 313,
+   "aggregation": "unweighted_mean_of_run_rates",
+   "rates": {
+    "stored": 0.8434504792332268,
+    "normalized": 0.8434504792332268,
+    "exploratory": 0.8434504792332268
+   },
+   "runs": [
+    {
+     "arm": "arm1",
+     "round": 3.0,
+     "seed": 42,
+     "lens": "agreeable_para1",
+     "n": 313,
+     "source_file": "eval_arm1_r3_s42_qwen25_7b_env76.json",
+     "rates": {
+      "stored": 0.8434504792332268,
+      "normalized": 0.8434504792332268,
+      "exploratory": 0.8434504792332268
+     }
+    }
+   ]
+  },
+  {
+   "arm": "arm2",
+   "round": 3.0,
+   "lens": "none",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n_responses": 313,
+   "aggregation": "unweighted_mean_of_run_rates",
+   "rates": {
+    "stored": 0.8210862619808307,
+    "normalized": 0.8210862619808307,
+    "exploratory": 0.8210862619808307
+   },
+   "runs": [
+    {
+     "arm": "arm2",
+     "round": 3.0,
+     "seed": 42,
+     "lens": "none",
+     "n": 313,
+     "source_file": "eval_arm2_r3_s42_qwen25_7b_env76.json",
+     "rates": {
+      "stored": 0.8210862619808307,
+      "normalized": 0.8210862619808307,
+      "exploratory": 0.8210862619808307
+     }
+    }
+   ]
+  },
+  {
+   "arm": "arm2",
+   "round": 3.0,
+   "lens": "agreeable",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n_responses": 313,
+   "aggregation": "unweighted_mean_of_run_rates",
+   "rates": {
+    "stored": 0.8242811501597445,
+    "normalized": 0.8242811501597445,
+    "exploratory": 0.8242811501597445
+   },
+   "runs": [
+    {
+     "arm": "arm2",
+     "round": 3.0,
+     "seed": 42,
+     "lens": "agreeable",
+     "n": 313,
+     "source_file": "eval_arm2_r3_s42_qwen25_7b_env76.json",
+     "rates": {
+      "stored": 0.8242811501597445,
+      "normalized": 0.8242811501597445,
+      "exploratory": 0.8242811501597445
+     }
+    }
+   ]
+  },
+  {
+   "arm": "arm2",
+   "round": 3.0,
+   "lens": "principled",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n_responses": 313,
+   "aggregation": "unweighted_mean_of_run_rates",
+   "rates": {
+    "stored": 0.792332268370607,
+    "normalized": 0.792332268370607,
+    "exploratory": 0.792332268370607
+   },
+   "runs": [
+    {
+     "arm": "arm2",
+     "round": 3.0,
+     "seed": 42,
+     "lens": "principled",
+     "n": 313,
+     "source_file": "eval_arm2_r3_s42_qwen25_7b_env76.json",
+     "rates": {
+      "stored": 0.792332268370607,
+      "normalized": 0.792332268370607,
+      "exploratory": 0.792332268370607
+     }
+    }
+   ]
+  },
+  {
+   "arm": "arm2",
+   "round": 3.0,
+   "lens": "agreeable_para1",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n_responses": 313,
+   "aggregation": "unweighted_mean_of_run_rates",
+   "rates": {
+    "stored": 0.8594249201277955,
+    "normalized": 0.8594249201277955,
+    "exploratory": 0.8594249201277955
+   },
+   "runs": [
+    {
+     "arm": "arm2",
+     "round": 3.0,
+     "seed": 42,
+     "lens": "agreeable_para1",
+     "n": 313,
+     "source_file": "eval_arm2_r3_s42_qwen25_7b_env76.json",
+     "rates": {
+      "stored": 0.8594249201277955,
+      "normalized": 0.8594249201277955,
+      "exploratory": 0.8594249201277955
+     }
+    }
+   ]
+  },
+  {
+   "arm": "arm3",
+   "round": 3.0,
+   "lens": "none",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n_responses": 313,
+   "aggregation": "unweighted_mean_of_run_rates",
+   "rates": {
+    "stored": 0.9073482428115016,
+    "normalized": 0.9073482428115016,
+    "exploratory": 0.9073482428115016
+   },
+   "runs": [
+    {
+     "arm": "arm3",
+     "round": 3.0,
+     "seed": 42,
+     "lens": "none",
+     "n": 313,
+     "source_file": "eval_arm3_r3_s42_qwen25_7b_env76.json",
+     "rates": {
+      "stored": 0.9073482428115016,
+      "normalized": 0.9073482428115016,
+      "exploratory": 0.9073482428115016
+     }
+    }
+   ]
+  },
+  {
+   "arm": "arm3",
+   "round": 3.0,
+   "lens": "agreeable",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n_responses": 313,
+   "aggregation": "unweighted_mean_of_run_rates",
+   "rates": {
+    "stored": 0.8178913738019169,
+    "normalized": 0.8178913738019169,
+    "exploratory": 0.8178913738019169
+   },
+   "runs": [
+    {
+     "arm": "arm3",
+     "round": 3.0,
+     "seed": 42,
+     "lens": "agreeable",
+     "n": 313,
+     "source_file": "eval_arm3_r3_s42_qwen25_7b_env76.json",
+     "rates": {
+      "stored": 0.8178913738019169,
+      "normalized": 0.8178913738019169,
+      "exploratory": 0.8178913738019169
+     }
+    }
+   ]
+  },
+  {
+   "arm": "arm3",
+   "round": 3.0,
+   "lens": "principled",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n_responses": 313,
+   "aggregation": "unweighted_mean_of_run_rates",
+   "rates": {
+    "stored": 0.8178913738019169,
+    "normalized": 0.8178913738019169,
+    "exploratory": 0.8178913738019169
+   },
+   "runs": [
+    {
+     "arm": "arm3",
+     "round": 3.0,
+     "seed": 42,
+     "lens": "principled",
+     "n": 313,
+     "source_file": "eval_arm3_r3_s42_qwen25_7b_env76.json",
+     "rates": {
+      "stored": 0.8178913738019169,
+      "normalized": 0.8178913738019169,
+      "exploratory": 0.8178913738019169
+     }
+    }
+   ]
+  },
+  {
+   "arm": "arm3",
+   "round": 3.0,
+   "lens": "agreeable_para1",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n_responses": 313,
+   "aggregation": "unweighted_mean_of_run_rates",
+   "rates": {
+    "stored": 0.8690095846645367,
+    "normalized": 0.8690095846645367,
+    "exploratory": 0.8690095846645367
+   },
+   "runs": [
+    {
+     "arm": "arm3",
+     "round": 3.0,
+     "seed": 42,
+     "lens": "agreeable_para1",
+     "n": 313,
+     "source_file": "eval_arm3_r3_s42_qwen25_7b_env76.json",
+     "rates": {
+      "stored": 0.8690095846645367,
+      "normalized": 0.8690095846645367,
+      "exploratory": 0.8690095846645367
+     }
+    }
+   ]
+  }
+ ],
+ "round3_seed42_grid": [
+  {
+   "arm": "arm0",
+   "requested_round": 3,
+   "source_round": 0,
+   "lens": "none",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n": 313,
+   "rates": {
+    "stored": 0.6613418530351438,
+    "normalized": 0.6613418530351438,
+    "exploratory": 0.6613418530351438
+   }
+  },
+  {
+   "arm": "arm0",
+   "requested_round": 3,
+   "source_round": 0,
+   "lens": "agreeable",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n": 313,
+   "rates": {
+    "stored": 0.31309904153354634,
+    "normalized": 0.31309904153354634,
+    "exploratory": 0.31309904153354634
+   }
+  },
+  {
+   "arm": "arm0",
+   "requested_round": 3,
+   "source_round": 0,
+   "lens": "principled",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n": 313,
+   "rates": {
+    "stored": 0.41214057507987223,
+    "normalized": 0.41214057507987223,
+    "exploratory": 0.41214057507987223
+   }
+  },
+  {
+   "arm": "arm0",
+   "requested_round": 3,
+   "source_round": 0,
+   "lens": "agreeable_para1",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n": 313,
+   "rates": {
+    "stored": 0.5686900958466453,
+    "normalized": 0.5686900958466453,
+    "exploratory": 0.5686900958466453
+   }
+  },
+  {
+   "arm": "arm1",
+   "requested_round": 3,
+   "source_round": 3,
+   "lens": "none",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n": 313,
+   "rates": {
+    "stored": 0.9041533546325878,
+    "normalized": 0.9041533546325878,
+    "exploratory": 0.9041533546325878
+   }
+  },
+  {
+   "arm": "arm1",
+   "requested_round": 3,
+   "source_round": 3,
+   "lens": "agreeable",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n": 313,
+   "rates": {
+    "stored": 0.792332268370607,
+    "normalized": 0.792332268370607,
+    "exploratory": 0.792332268370607
+   }
+  },
+  {
+   "arm": "arm1",
+   "requested_round": 3,
+   "source_round": 3,
+   "lens": "principled",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n": 313,
+   "rates": {
+    "stored": 0.8434504792332268,
+    "normalized": 0.8434504792332268,
+    "exploratory": 0.8434504792332268
+   }
+  },
+  {
+   "arm": "arm1",
+   "requested_round": 3,
+   "source_round": 3,
+   "lens": "agreeable_para1",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n": 313,
+   "rates": {
+    "stored": 0.8434504792332268,
+    "normalized": 0.8434504792332268,
+    "exploratory": 0.8434504792332268
+   }
+  },
+  {
+   "arm": "arm2",
+   "requested_round": 3,
+   "source_round": 3,
+   "lens": "none",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n": 313,
+   "rates": {
+    "stored": 0.8210862619808307,
+    "normalized": 0.8210862619808307,
+    "exploratory": 0.8210862619808307
+   }
+  },
+  {
+   "arm": "arm2",
+   "requested_round": 3,
+   "source_round": 3,
+   "lens": "agreeable",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n": 313,
+   "rates": {
+    "stored": 0.8242811501597445,
+    "normalized": 0.8242811501597445,
+    "exploratory": 0.8242811501597445
+   }
+  },
+  {
+   "arm": "arm2",
+   "requested_round": 3,
+   "source_round": 3,
+   "lens": "principled",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n": 313,
+   "rates": {
+    "stored": 0.792332268370607,
+    "normalized": 0.792332268370607,
+    "exploratory": 0.792332268370607
+   }
+  },
+  {
+   "arm": "arm2",
+   "requested_round": 3,
+   "source_round": 3,
+   "lens": "agreeable_para1",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n": 313,
+   "rates": {
+    "stored": 0.8594249201277955,
+    "normalized": 0.8594249201277955,
+    "exploratory": 0.8594249201277955
+   }
+  },
+  {
+   "arm": "arm3",
+   "requested_round": 3,
+   "source_round": 3,
+   "lens": "none",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n": 313,
+   "rates": {
+    "stored": 0.9073482428115016,
+    "normalized": 0.9073482428115016,
+    "exploratory": 0.9073482428115016
+   }
+  },
+  {
+   "arm": "arm3",
+   "requested_round": 3,
+   "source_round": 3,
+   "lens": "agreeable",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n": 313,
+   "rates": {
+    "stored": 0.8178913738019169,
+    "normalized": 0.8178913738019169,
+    "exploratory": 0.8178913738019169
+   }
+  },
+  {
+   "arm": "arm3",
+   "requested_round": 3,
+   "source_round": 3,
+   "lens": "principled",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n": 313,
+   "rates": {
+    "stored": 0.8178913738019169,
+    "normalized": 0.8178913738019169,
+    "exploratory": 0.8178913738019169
+   }
+  },
+  {
+   "arm": "arm3",
+   "requested_round": 3,
+   "source_round": 3,
+   "lens": "agreeable_para1",
+   "status": "available",
+   "n_runs": 1,
+   "seeds": [
+    42
+   ],
+   "n": 313,
+   "rates": {
+    "stored": 0.8690095846645367,
+    "normalized": 0.8690095846645367,
+    "exploratory": 0.8690095846645367
+   }
+  }
+ ],
+ "interaction_contrasts": {
+  "definition": "I_a = (R_none - R_lens)_arm - (R_none - R_lens)_arm0",
+  "baseline_note": "arm0에는 round 3 파일이 없어 학습 없는 arm0 round 0 seed 42를 round-3 대조 기준으로 사용했다. ⚠️ 이 생성기는 다중시드 대비에서도 기저를 **시드42 하나로 고정**한다. `analyze_dual_primary.py`는 같은 대비에서 기저를 **시드매칭**하므로 `dual_primary_summary_*`의 baseline_n_runs는 3, 여기는 1로 나온다. 그런데도 두 산출물의 I_a가 자릿수까지 같은 것은 arm0가 어댑터 없는 무학습 모델이라 **시드 불변**이기 때문일 뿐이다 — 규약이 같아서가 아니다. arm0가 시드에 따라 달라지는 순간 두 산출물은 갈라지고, 그때는 시드매칭 쪽이 정본이다. 이 전제는 `tests/test_cross_generator.py`가 지킨다.",
+  "seed_42": [
+   {
+    "arm": "arm1",
+    "lens": "agreeable",
+    "status": "available",
+    "treatment_round": 3,
+    "treatment_n_runs": 1,
+    "treatment_seeds": [
+     42
+    ],
+    "baseline_round": 0,
+    "baseline_n_runs": 1,
+    "baseline_seeds": [
+     42
+    ],
+    "values": {
+     "stored": {
+      "arm_drop": 0.11182108626198084,
+      "baseline_drop": 0.34824281150159747,
+      "I_a": -0.23642172523961663
+     },
+     "normalized": {
+      "arm_drop": 0.11182108626198084,
+      "baseline_drop": 0.34824281150159747,
+      "I_a": -0.23642172523961663
+     },
+     "exploratory": {
+      "arm_drop": 0.11182108626198084,
+      "baseline_drop": 0.34824281150159747,
+      "I_a": -0.23642172523961663
+     }
+    }
+   },
+   {
+    "arm": "arm1",
+    "lens": "agreeable_para1",
+    "status": "available",
+    "treatment_round": 3,
+    "treatment_n_runs": 1,
+    "treatment_seeds": [
+     42
+    ],
+    "baseline_round": 0,
+    "baseline_n_runs": 1,
+    "baseline_seeds": [
+     42
+    ],
+    "values": {
+     "stored": {
+      "arm_drop": 0.060702875399361034,
+      "baseline_drop": 0.0926517571884985,
+      "I_a": -0.03194888178913746
+     },
+     "normalized": {
+      "arm_drop": 0.060702875399361034,
+      "baseline_drop": 0.0926517571884985,
+      "I_a": -0.03194888178913746
+     },
+     "exploratory": {
+      "arm_drop": 0.060702875399361034,
+      "baseline_drop": 0.0926517571884985,
+      "I_a": -0.03194888178913746
+     }
+    }
+   },
+   {
+    "arm": "arm2",
+    "lens": "agreeable",
+    "status": "available",
+    "treatment_round": 3,
+    "treatment_n_runs": 1,
+    "treatment_seeds": [
+     42
+    ],
+    "baseline_round": 0,
+    "baseline_n_runs": 1,
+    "baseline_seeds": [
+     42
+    ],
+    "values": {
+     "stored": {
+      "arm_drop": -0.0031948881789137795,
+      "baseline_drop": 0.34824281150159747,
+      "I_a": -0.35143769968051125
+     },
+     "normalized": {
+      "arm_drop": -0.0031948881789137795,
+      "baseline_drop": 0.34824281150159747,
+      "I_a": -0.35143769968051125
+     },
+     "exploratory": {
+      "arm_drop": -0.0031948881789137795,
+      "baseline_drop": 0.34824281150159747,
+      "I_a": -0.35143769968051125
+     }
+    }
+   },
+   {
+    "arm": "arm2",
+    "lens": "agreeable_para1",
+    "status": "available",
+    "treatment_round": 3,
+    "treatment_n_runs": 1,
+    "treatment_seeds": [
+     42
+    ],
+    "baseline_round": 0,
+    "baseline_n_runs": 1,
+    "baseline_seeds": [
+     42
+    ],
+    "values": {
+     "stored": {
+      "arm_drop": -0.0383386581469648,
+      "baseline_drop": 0.0926517571884985,
+      "I_a": -0.1309904153354633
+     },
+     "normalized": {
+      "arm_drop": -0.0383386581469648,
+      "baseline_drop": 0.0926517571884985,
+      "I_a": -0.1309904153354633
+     },
+     "exploratory": {
+      "arm_drop": -0.0383386581469648,
+      "baseline_drop": 0.0926517571884985,
+      "I_a": -0.1309904153354633
+     }
+    }
+   },
+   {
+    "arm": "arm3",
+    "lens": "agreeable",
+    "status": "available",
+    "treatment_round": 3,
+    "treatment_n_runs": 1,
+    "treatment_seeds": [
+     42
+    ],
+    "baseline_round": 0,
+    "baseline_n_runs": 1,
+    "baseline_seeds": [
+     42
+    ],
+    "values": {
+     "stored": {
+      "arm_drop": 0.08945686900958472,
+      "baseline_drop": 0.34824281150159747,
+      "I_a": -0.25878594249201275
+     },
+     "normalized": {
+      "arm_drop": 0.08945686900958472,
+      "baseline_drop": 0.34824281150159747,
+      "I_a": -0.25878594249201275
+     },
+     "exploratory": {
+      "arm_drop": 0.08945686900958472,
+      "baseline_drop": 0.34824281150159747,
+      "I_a": -0.25878594249201275
+     }
+    }
+   },
+   {
+    "arm": "arm3",
+    "lens": "agreeable_para1",
+    "status": "available",
+    "treatment_round": 3,
+    "treatment_n_runs": 1,
+    "treatment_seeds": [
+     42
+    ],
+    "baseline_round": 0,
+    "baseline_n_runs": 1,
+    "baseline_seeds": [
+     42
+    ],
+    "values": {
+     "stored": {
+      "arm_drop": 0.03833865814696491,
+      "baseline_drop": 0.0926517571884985,
+      "I_a": -0.054313099041533586
+     },
+     "normalized": {
+      "arm_drop": 0.03833865814696491,
+      "baseline_drop": 0.0926517571884985,
+      "I_a": -0.054313099041533586
+     },
+     "exploratory": {
+      "arm_drop": 0.03833865814696491,
+      "baseline_drop": 0.0926517571884985,
+      "I_a": -0.054313099041533586
+     }
+    }
+   }
+  ],
+  "multi_seed_means": [
+   {
+    "arm": "arm1",
+    "lens": "agreeable",
+    "status": "missing",
+    "reason": "공통 treatment seed가 2개 미만이다",
+    "treatment_round": 3,
+    "treatment_n_runs": 1,
+    "treatment_seeds": [
+     42
+    ],
+    "baseline_round": 0,
+    "baseline_n_runs": 1,
+    "baseline_seeds": [
+     42
+    ],
+    "aggregation": null,
+    "values": null
+   },
+   {
+    "arm": "arm1",
+    "lens": "agreeable_para1",
+    "status": "missing",
+    "reason": "공통 treatment seed가 2개 미만이다",
+    "treatment_round": 3,
+    "treatment_n_runs": 1,
+    "treatment_seeds": [
+     42
+    ],
+    "baseline_round": 0,
+    "baseline_n_runs": 1,
+    "baseline_seeds": [
+     42
+    ],
+    "aggregation": null,
+    "values": null
+   },
+   {
+    "arm": "arm2",
+    "lens": "agreeable",
+    "status": "missing",
+    "reason": "공통 treatment seed가 2개 미만이다",
+    "treatment_round": 3,
+    "treatment_n_runs": 1,
+    "treatment_seeds": [
+     42
+    ],
+    "baseline_round": 0,
+    "baseline_n_runs": 1,
+    "baseline_seeds": [
+     42
+    ],
+    "aggregation": null,
+    "values": null
+   },
+   {
+    "arm": "arm2",
+    "lens": "agreeable_para1",
+    "status": "missing",
+    "reason": "공통 treatment seed가 2개 미만이다",
+    "treatment_round": 3,
+    "treatment_n_runs": 1,
+    "treatment_seeds": [
+     42
+    ],
+    "baseline_round": 0,
+    "baseline_n_runs": 1,
+    "baseline_seeds": [
+     42
+    ],
+    "aggregation": null,
+    "values": null
+   },
+   {
+    "arm": "arm3",
+    "lens": "agreeable",
+    "status": "missing",
+    "reason": "공통 treatment seed가 2개 미만이다",
+    "treatment_round": 3,
+    "treatment_n_runs": 1,
+    "treatment_seeds": [
+     42
+    ],
+    "baseline_round": 0,
+    "baseline_n_runs": 1,
+    "baseline_seeds": [
+     42
+    ],
+    "aggregation": null,
+    "values": null
+   },
+   {
+    "arm": "arm3",
+    "lens": "agreeable_para1",
+    "status": "missing",
+    "reason": "공통 treatment seed가 2개 미만이다",
+    "treatment_round": 3,
+    "treatment_n_runs": 1,
+    "treatment_seeds": [
+     42
+    ],
+    "baseline_round": 0,
+    "baseline_n_runs": 1,
+    "baseline_seeds": [
+     42
+    ],
+    "aggregation": null,
+    "values": null
+   }
+  ]
+ }
+}
